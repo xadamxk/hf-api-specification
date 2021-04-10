@@ -1,0 +1,35 @@
+post:
+  tags:
+    - read
+  summary: Returns information for the current user.
+  description: Returns information for the current user.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          uid:
+            summary: return current user's uuid
+            value:
+              asks:
+                me:
+                  uid: true
+          usernameUsergroup:
+            summary: return current user's username and usergroup
+            value:
+              asks:
+                me:
+                  uid: true
+                  usergroup: true
+        schema:
+          $ref: ..\components\schemas\AskMe.yaml
+  responses:
+    '200':
+      description: Me info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    '401':
+      $ref: ..\components\responses\UnauthorizedError.yaml

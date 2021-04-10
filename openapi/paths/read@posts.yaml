@@ -1,0 +1,30 @@
+post:
+  tags:
+    - read
+  summary: Returns information for provided post(s).
+  description: Returns information for provided post(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          lounge:
+            summary: return HF API post content
+            value:
+              asks:
+                posts:
+                  _pid:
+                    - 59852445
+                  message: true
+        schema:
+          $ref: ..\components\schemas\AskPosts.yaml
+  responses:
+    '200':
+      description: Post(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    '401':
+      $ref: ..\components\responses\UnauthorizedError.yaml

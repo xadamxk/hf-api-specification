@@ -1,36 +1,13 @@
 {
-  "name": "hf-api-specification",
+  "name": "hf-api",
   "version": "1.0.0",
-  "description": "OpenAPI Specification for HF API.",
-  "author": "xadamxk",
-  "engines": {
-    "node": ">=14.15.4",
-    "npm": ">=6.14.10"
-  },
-  "scripts": {
-    "start": "openapi preview-docs openapi/openapi.yaml",
-    "build": "npm install & openapi build -o dist",
-    "test": "openapi lint",
-    "python": "openapi-generator-cli generate -u openapi/openapi.yaml -g python -o generated-sources/hf-python-sdk"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xadamxk/hf-api-specification.git"
-  },
-  "keywords": [
-    "openapi",
-    "swagger",
-    "hf"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xadamxk/hf-api-specification/issues"
-  },
-  "homepage": "https://github.com/xadamxk/hf-api-specification#readme",
   "dependencies": {
-    "@redocly/openapi-cli": "1.0.0-beta.43"
+    "@redocly/openapi-cli": "^1.0.0-beta.43"
   },
-  "devDependencies": {
-    "@openapitools/openapi-generator-cli": "2.2.5"
+  "private": true,
+  "scripts": {
+    "start": "openapi preview-docs",
+    "build": "openapi bundle -o dist",
+    "test": "openapi lint"
   }
 }

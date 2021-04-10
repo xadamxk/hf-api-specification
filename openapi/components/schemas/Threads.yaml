@@ -1,0 +1,60 @@
+type: object
+description: 'Permission: Posts Permissions'
+properties:
+  _tid:
+    type: array
+    description: Search directly by Thread ID(s).
+    items:
+      type: number
+  _uid:
+    type: array
+    description: Search by User ID(s).
+    items:
+      type: number
+  _page:
+    type: array
+    description: 'Optional: Used with _uid.'
+    items:
+      type: number
+  _perpage:
+    type: array
+    description: 'Optional: Used with _uid.'
+    items:
+      type: number
+  tid:
+    type: boolean
+  uid:
+    type: boolean
+  fid:
+    type: boolean
+  subject:
+    type: boolean
+    description: Return name of thread.
+  closed:
+    type: boolean
+  numreplies:
+    type: boolean
+  views:
+    type: boolean
+  dateline:
+    type: boolean
+  firstpost:
+    type: boolean
+  lastpost:
+    type: boolean
+  lastposter:
+    type: boolean
+  lastposteruid:
+    type: boolean
+  prefix:
+    type: boolean
+  icon:
+    type: boolean
+  poll:
+    type: boolean
+  username:
+    type: boolean
+  sticky:
+    type: boolean
+  bestpid:
+    type: boolean

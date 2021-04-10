@@ -1,0 +1,57 @@
+type: object
+description: 'Permission: Basic & Advanced Info Permissions'
+properties:
+  vault:
+    type: boolean
+    description: API client vault balance
+  uid:
+    type: boolean
+  username:
+    type: boolean
+  usergroup:
+    type: boolean
+  displaygroup:
+    type: boolean
+  additionalgroups:
+    type: boolean
+  postnum:
+    type: boolean
+  awards:
+    type: boolean
+  bytes:
+    type: boolean
+  threadnum:
+    type: boolean
+  avatar:
+    type: boolean
+  avatardimensions:
+    type: boolean
+  avatartype:
+    type: boolean
+  lastvisit:
+    type: boolean
+  usertitle:
+    type: boolean
+  website:
+    type: boolean
+  timeonline:
+    type: boolean
+  reputation:
+    type: boolean
+  referrals:
+    type: boolean
+  lastactive:
+    type: boolean
+    description: Requires 'Advanced Info' permissions
+  unreadpms:
+    type: boolean
+    description: Requires 'Advanced Info' permissions
+  invisible:
+    type: boolean
+    description: Requires 'Advanced Info' permissions
+  totalpms:
+    type: boolean
+    description: Requires 'Advanced Info' permissions
+  warningpoints:
+    type: boolean
+    description: Requires 'Advanced Info' permissions

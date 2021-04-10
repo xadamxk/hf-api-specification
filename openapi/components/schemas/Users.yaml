@@ -1,0 +1,46 @@
+type: object
+description: 'Permission: Users Permissions'
+properties:
+  _uid:
+    type: array
+    description: Search directly by User ID(s).
+    items:
+      type: number
+  uid:
+    type: boolean
+  username:
+    type: boolean
+  usergroup:
+    type: boolean
+  displaygroup:
+    type: boolean
+  additionalgroups:
+    type: boolean
+  postnum:
+    type: boolean
+    description: 'alias: post count'
+  awards:
+    type: boolean
+  myps:
+    type: boolean
+    description: 'alias: bytes'
+  threadnum:
+    type: boolean
+    description: 'alias: thread count'
+  avatar:
+    type: boolean
+  avatardimensions:
+    type: boolean
+  avatartype:
+    type: boolean
+  usertitle:
+    type: boolean
+  website:
+    type: boolean
+  timeonline:
+    type: boolean
+  reputation:
+    type: boolean
+    description: 'alias: popularity'
+  referrals:
+    type: boolean

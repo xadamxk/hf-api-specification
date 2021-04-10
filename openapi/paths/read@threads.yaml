@@ -1,0 +1,30 @@
+post:
+  tags:
+    - read
+  summary: Returns information for provided thread(s).
+  description: Returns information for provided thread(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          lounge:
+            summary: return HF API Thread name
+            value:
+              asks:
+                threads:
+                  _tid:
+                    - 6083782
+                  subject: true
+        schema:
+          $ref: ..\components\schemas\AskThreads.yaml
+  responses:
+    '200':
+      description: Thread(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    '401':
+      $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,0 +1,30 @@
+post:
+  tags:
+    - read
+  summary: Returns information for provided forum(s).
+  description: Returns information for provided forum(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          lounge:
+            summary: return lounge forum information
+            value:
+              asks:
+                forums:
+                  _fid:
+                    - 25
+                  name: true
+        schema:
+          $ref: ..\components\schemas\AskForums.yaml
+  responses:
+    '200':
+      description: Forum(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    '401':
+      $ref: ..\components\responses\UnauthorizedError.yaml

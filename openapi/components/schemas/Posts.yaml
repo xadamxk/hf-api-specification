@@ -1,0 +1,53 @@
+type: object
+description: 'Permission: Posts Permissions'
+properties:
+  _pid:
+    type: array
+    description: Search directly by Post ID(s).
+    items:
+      type: number
+  _tid:
+    type: array
+    description: Search directly by Thread ID(s).
+    items:
+      type: number
+  _uid:
+    type: array
+    description: Search directly by User ID(s).
+    items:
+      type: number
+  _page:
+    type: array
+    description: 'Optional: Used with _tid or _uid.'
+    items:
+      type: number
+  _perpage:
+    type: array
+    description: 'Optional: Used with _tid or _uid.'
+    items:
+      type: number
+  pid:
+    type: boolean
+  tid:
+    type: boolean
+  uid:
+    type: boolean
+  fid:
+    type: boolean
+  dateline:
+    type: boolean
+  message:
+    type: boolean
+  subject:
+    type: boolean
+  edituid:
+    type: boolean
+  edittime:
+    type: boolean
+  editreason:
+    type: boolean
+  author:
+    type: array
+    description: Array of Users
+    items:
+      type: string

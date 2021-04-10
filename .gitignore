@@ -1,15 +1,3 @@
-# Distributions
+# Dir for bundles
 dist
-dist.yaml
-*.zip
-.iml
-generated-sources
-
-
-# Dependencies
 node_modules
-
-# IDE
-.idea
-.vscode
-.DS_Store

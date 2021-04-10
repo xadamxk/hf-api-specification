@@ -1,0 +1,15 @@
+type: object
+description: 'Permission: Posts Permissions'
+properties:
+  _fid:
+    type: array
+    items:
+      type: number
+  fid:
+    type: boolean
+  name:
+    type: boolean
+  description:
+    type: boolean
+  type:
+    type: boolean

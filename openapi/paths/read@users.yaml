@@ -1,0 +1,31 @@
+post:
+  tags:
+    - read
+  summary: Returns information for provided user(s).
+  description: Returns information for provided user(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          lounge:
+            summary: return user information for UID 1
+            value:
+              asks:
+                users:
+                  _uid:
+                    - 1
+                  username: true
+                  postnum: true
+        schema:
+          $ref: ..\components\schemas\AskUsers.yaml
+  responses:
+    '200':
+      description: User(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    '401':
+      $ref: ..\components\responses\UnauthorizedError.yaml
