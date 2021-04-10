@@ -1,0 +1,13 @@
+apiDefinitions:
+  main: openapi/openapi.yaml
+lint:
+  extends:
+    - recommended
+  riles:
+    no-unused-components: warning
+referenceDocs:
+  htmlTemplate: ./docs/index.html
+  theme:
+    colors:
+      primary:
+        main: #333

@@ -1,0 +1,7 @@
+gitHost: github.com
+gitRepoId: hf-python-sdk
+gitUserId: xadamxk
+additionalProperties:
+    packageName: hf-python-sdk
+    projectName: hf-python-sdk
+    packageVersion: 0.1.0

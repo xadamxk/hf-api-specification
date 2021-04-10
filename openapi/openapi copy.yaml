@@ -1,0 +1,436 @@
+openapi: 3.0.1
+info:
+  title: HF API
+  description: OpenAPI specification for the Hack Forums API.
+  version: 2.0.0
+servers:
+  - url: https://hackforums.net/api/v2
+    description: HF API Version 2
+components:
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    AskMe:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Me"
+    Me:
+      type: object
+      description: "Permission: Basic & Advanced Info Permissions"
+      properties:
+        vault:
+          type: boolean
+          description: "API client vault balance"
+        uid:
+          type: boolean
+        username:
+          type: boolean
+        usergroup:
+          type: boolean
+        displaygroup:
+          type: boolean
+        additionalgroups:
+          type: boolean
+        postnum:
+          type: boolean
+        awards:
+          type: boolean
+        bytes:
+          type: boolean
+        threadnum:
+          type: boolean
+        avatar:
+          type: boolean
+        avatardimensions:
+          type: boolean
+        avatartype:
+          type: boolean
+        lastvisit:
+          type: boolean
+        usertitle:
+          type: boolean
+        website:
+          type: boolean
+        timeonline:
+          type: boolean
+        reputation:
+          type: boolean
+        referrals:
+          type: boolean
+        lastactive:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        unreadpms:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        invisible:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        totalpms:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        warningpoints:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+    AskForums:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Forums"
+    Forums:
+      type: object
+      description: "Permission: Posts Permissions"
+      properties:
+        _fid:
+          type: array
+          items:
+            type: number
+        fid:
+          type: boolean
+        name:
+          type: boolean
+        description:
+          type: boolean
+        type:
+          type: boolean
+    AskThreads:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Threads"
+    Threads:
+      type: object
+      description: "Permission: Posts Permissions"
+      properties:
+        _tid:
+          type: array
+          description: "Search directly by Thread ID(s)."
+          items:
+            type: number
+        _uid:
+          type: array
+          description: "Search by User ID(s)."
+          items:
+            type: number
+        _page:
+          type: array
+          description: "Optional: Used with _uid."
+          items:
+            type: number
+        _perpage:
+          type: array
+          description: "Optional: Used with _uid."
+          items:
+            type: number
+        tid:
+          type: boolean
+        uid:
+          type: boolean
+        fid:
+          type: boolean
+        subject:
+          type: boolean
+          description: "Return name of thread."
+        closed:
+          type: boolean
+        numreplies:
+          type: boolean
+        views:
+          type: boolean
+        dateline:
+          type: boolean
+        firstpost:
+          type: boolean
+        lastpost:
+          type: boolean
+        lastposter:
+          type: boolean
+        lastposteruid:
+          type: boolean
+        prefix:
+          type: boolean
+        icon:
+          type: boolean
+        poll:
+          type: boolean
+        username:
+          type: boolean
+        sticky:
+          type: boolean
+        bestpid:
+          type: boolean
+    AskPosts:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Posts"
+    Posts:
+      type: object
+      description: "Permission: Posts Permissions"
+      properties:
+        _pid:
+          type: array
+          description: "Search directly by Post ID(s)."
+          items:
+            type: number
+        _tid:
+          type: array
+          description: "Search directly by Thread ID(s)."
+          items:
+            type: number
+        _uid:
+          type: array
+          description: "Search directly by User ID(s)."
+          items:
+            type: number
+        _page:
+          type: array
+          description: "Optional: Used with _tid or _uid."
+          items:
+            type: number
+        _perpage:
+          type: array
+          description: "Optional: Used with _tid or _uid."
+          items:
+            type: number
+        pid:
+          type: boolean
+        tid:
+          type: boolean
+        uid:
+          type: boolean
+        fid:
+          type: boolean
+        dateline:
+          type: boolean
+        message:
+          type: boolean
+        subject:
+          type: boolean
+        edituid:
+          type: boolean
+        edittime:
+          type: boolean
+        editreason:
+          type: boolean
+        author:
+          type: array
+          description: "Array of Users"
+          items:
+            type: string
+    AskUsers:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Users"
+    Users:
+      type: object
+      description: "Permission: Users Permissions"
+      properties:
+        _uid:
+          type: array
+          description: "Search directly by User ID(s)."
+          items:
+            type: number
+        uid:
+          type: boolean
+        username:
+          type: boolean
+        usergroup:
+          type: boolean
+        displaygroup:
+          type: boolean
+        additionalgroups:
+          type: boolean
+        postnum:
+          type: boolean
+          description: "alias: post count"
+        awards:
+          type: boolean
+        myps:
+          type: boolean
+          description: "alias: bytes"
+        threadnum:
+          type: boolean
+          description: "alias: thread count"
+        avatar:
+          type: boolean
+        avatardimensions:
+          type: boolean
+        avatartype:
+          type: boolean
+        usertitle:
+          type: boolean
+        website:
+          type: boolean
+        timeonline:
+          type: boolean
+        reputation:
+          type: boolean
+          description: "alias: popularity"
+        referrals:
+          type: boolean
+
+security:
+  - bearerAuth: []
+paths:
+  /read/me:
+    post:
+      tags:
+        - read
+      summary: Returns information for the current user.
+      description: Returns information for the current user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            examples:
+              uid:
+                summary: return current user's uuid
+                value: { "asks": { "me": { "uid": true } } }
+              usernameUsergroup:
+                summary: return current user's username and usergroup
+                value: { "asks": { "me": { "uid": true, "usergroup": true } } }
+            schema:
+              $ref: "#/components/schemas/AskMe"
+      responses:
+        "200": # status code
+          description: Me info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /read/forums:
+    post:
+      tags:
+        - read
+      summary: Returns information for provided forum(s).
+      description: Returns information for provided forum(s).
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            examples:
+              lounge:
+                summary: return lounge forum information
+                value: { "asks": { "forums": { "_fid": [25], "name": true } } }
+            schema:
+              $ref: "#/components/schemas/AskForums"
+      responses:
+        "200": # status code
+          description: Forum(s) info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+  /read/threads:
+    post:
+      tags:
+        - read
+      summary: Returns information for provided thread(s).
+      description: Returns information for provided thread(s).
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            examples:
+              lounge:
+                summary: return HF API Thread name
+                value:
+                  {
+                    "asks":
+                      { "threads": { "_tid": [6083782], "subject": true } },
+                  }
+            schema:
+              $ref: "#/components/schemas/AskThreads"
+      responses:
+        "200": # status code
+          description: Thread(s) info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /read/posts:
+    post:
+      tags:
+        - read
+      summary: Returns information for provided post(s).
+      description: Returns information for provided post(s).
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            examples:
+              lounge:
+                summary: return HF API post content
+                value:
+                  {
+                    "asks":
+                      { "posts": { "_pid": [59852445], "message": true } },
+                  }
+            schema:
+              $ref: "#/components/schemas/AskPosts"
+      responses:
+        "200": # status code
+          description: Post(s) info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+  /read/users:
+    post:
+      tags:
+        - read
+      summary: Returns information for provided user(s).
+      description: Returns information for provided user(s).
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            examples:
+              lounge:
+                summary: return user information for UID 1
+                value:
+                  {
+                    "asks":
+                      {
+                        "users":
+                          { "_uid": [1], "username": true, "postnum": true },
+                      },
+                  }
+            schema:
+              $ref: "#/components/schemas/AskUsers"
+      responses:
+        "200": # status code
+          description: User(s) info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"

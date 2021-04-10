@@ -1,0 +1,118 @@
+openapi: 3.0.1
+info:
+  title: HF API
+  description: OpenAPI specification for the Hack Forums API.
+  version: 2.0.0
+  license:
+    name: MIT
+    url: https://github.com/xadamxk/hf-api-specification
+servers:
+  - url: https://hackforums.net/api/v2
+    description: HF API Version 2
+components:
+  responses:
+    UnauthorizedError:
+      description: Access token is missing or invalid
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    AskMe:
+      type: object
+      description: ""
+      properties:
+        asks:
+          $ref: "#/components/schemas/Me"
+    Me:
+      type: object
+      description: "Permission: Basic & Advanced Info Permissions"
+      properties:
+        vault:
+          type: boolean
+          description: "API client vault balance"
+        uid:
+          type: boolean
+        username:
+          type: boolean
+        usergroup:
+          type: boolean
+        displaygroup:
+          type: boolean
+        additionalgroups:
+          type: boolean
+        postnum:
+          type: boolean
+        awards:
+          type: boolean
+        bytes:
+          type: boolean
+        threadnum:
+          type: boolean
+        avatar:
+          type: boolean
+        avatardimensions:
+          type: boolean
+        avatartype:
+          type: boolean
+        lastvisit:
+          type: boolean
+        usertitle:
+          type: boolean
+        website:
+          type: boolean
+        timeonline:
+          type: boolean
+        reputation:
+          type: boolean
+        referrals:
+          type: boolean
+        lastactive:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        unreadpms:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        invisible:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        totalpms:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+        warningpoints:
+          type: boolean
+          description: "Requires 'Advanced Info' permissions"
+
+security:
+  - bearerAuth: []
+paths:
+  /read/me:
+    post:
+      operationId: getMe
+      tags:
+        - read
+      summary: Returns information for the current user.
+      description: Returns information for the current user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            examples:
+              uid:
+                summary: return current user's uuid
+                value: { "asks": { "me": { "uid": true } } }
+              usernameUsergroup:
+                summary: return current user's username and usergroup
+                value: { "asks": { "me": { "uid": true, "usergroup": true } } }
+            schema:
+              $ref: "#/components/schemas/AskMe"
+      responses:
+        "200": # status code
+          description: Me info
+          headers:
+            x-rate-limit-remaining:
+              schema:
+                type: integer
+                description: "Request limit per hour."
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
