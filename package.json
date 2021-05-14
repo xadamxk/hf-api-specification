@@ -1,13 +1,14 @@
 {
-  "name": "hf-api",
+  "name": "hf-api-specification",
   "version": "1.0.0",
   "dependencies": {
-    "@redocly/openapi-cli": "^1.0.0-beta.43"
+    "@redocly/openapi-cli": "^1.0.0-beta.45"
   },
   "private": true,
   "scripts": {
     "start": "openapi preview-docs",
-    "build": "openapi bundle -o dist",
+    "build": "openapi bundle --output dist/openapi.json openapi/openapi.yaml",
+    "build:yaml": "openapi bundle --output dist/openapi.yaml openapi/openapi.yaml",
     "test": "openapi lint"
   }
 }
