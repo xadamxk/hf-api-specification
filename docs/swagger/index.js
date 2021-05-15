@@ -1,7 +1,7 @@
-import SwaggerUIBundle from 'swagger-ui';
+import SwaggerUI from 'swagger-ui';
 import 'swagger-ui/dist/swagger-ui.css';
 
-SwaggerUIBundle({
+SwaggerUI({
   spec: require('../../dist/openapi.json'),
   dom_id: '#swagger',
 });
