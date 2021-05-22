@@ -1,0 +1,22 @@
+post:
+  tags:
+    - read
+  summary: Returns information relating to bytes.
+  description: Returns information relating to bytes.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+        schema:
+          $ref: ..\components\schemas\AskBytes.yaml
+  responses:
+    "200":
+      description: Forum(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

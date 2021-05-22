@@ -4,7 +4,7 @@ info:
   description: OpenAPI specification for the Hack Forums API.
   version: 2.0.0
 servers:
-  - url: 'https://hackforums.net/api/v2'
+  - url: "https://hackforums.net/api/v2"
     description: HF API Version 2
 components:
   securitySchemes:
@@ -24,3 +24,5 @@ paths:
     $ref: paths\read@posts.yaml
   /read/users:
     $ref: paths\read@users.yaml
+  /read/bytes:
+    $ref: paths\read@bytes.yaml
