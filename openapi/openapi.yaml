@@ -26,3 +26,5 @@ paths:
     $ref: paths\read@users.yaml
   /read/bytes:
     $ref: paths\read@bytes.yaml
+  /read/contracts:
+    $ref: paths\read@contracts.yaml

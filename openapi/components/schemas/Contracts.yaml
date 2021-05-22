@@ -1,0 +1,106 @@
+type: object
+description: "Permission: Posts Permissions"
+properties:
+  _cid:
+    type: array
+    description: "Contract ids."
+    items:
+      type: number
+  _uid:
+    type: array
+    description: "Optional _page & _perpage parameters"
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  cid:
+    type: boolean
+    description: "Contract id."
+  dateline:
+    type: boolean
+    description: Contract start date time.
+  otherdateline:
+    type: boolean
+    description: Contract end date time.
+  public:
+    type: boolean
+  timeout_days:
+    type: boolean
+  timeout:
+    type: boolean
+  status:
+    type: boolean
+  istatus:
+    type: boolean
+  ostatus:
+    type: boolean
+  cancelstatus:
+    type: boolean
+  type:
+    type: boolean
+  tid:
+    type: boolean
+  inituid:
+    type: boolean
+  otheruid:
+    type: boolean
+  muid:
+    type: boolean
+  iprice:
+    type: boolean
+  oprice:
+    type: boolean
+  iproduct:
+    type: boolean
+  oproduct:
+    type: boolean
+  icurrency:
+    type: boolean
+  ocurrency:
+    type: boolean
+  terms:
+    type: boolean
+  template_id:
+    type: boolean
+  oaddress:
+    type: boolean
+  iaddress:
+    type: boolean
+  inituser:
+    type: array
+    items:
+      type: string
+  otheruser:
+    type: array
+    items:
+      type: string
+  escrow:
+    type: array
+    items:
+      type: string
+  thread:
+    type: array
+    items:
+      type: string
+  idispute:
+    type: array
+    items:
+      type: string
+  odispute:
+    type: array
+    items:
+      type: string
+  ibrating:
+    type: array
+    items:
+      type: string
+  obrating:
+    type: array
+    items:
+      type: string

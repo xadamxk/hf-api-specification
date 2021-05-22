@@ -1,0 +1,36 @@
+post:
+  tags:
+    - read
+  summary: Returns information relating to contracts.
+  description: Returns information relating to contracts.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          contract:
+            summary: return contract information
+            value:
+              asks:
+                contracts:
+                  _cid:
+                    - 279461
+                  cid: true
+                  dateline: true
+                  otherdateline: true
+                  public: true
+                  timeout_days: true
+                  timeout: true
+                  status: true
+        schema:
+          $ref: ..\components\schemas\AskContracts.yaml
+  responses:
+    "200":
+      description: Contract(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml
