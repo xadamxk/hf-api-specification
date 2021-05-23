@@ -9,6 +9,19 @@ post:
     content:
       application/json:
         examples:
+          byteTransaction:
+            summary: xadamxk's last 10 byte transactions.
+            value:
+              asks:
+                bytes:
+                  _uid: "1306528"
+                  _perpage: 10
+                  id: true
+                  amount: true
+                  dateline: true
+                  type: true
+                  reason: true
+                  from: true
         schema:
           $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
   responses:
