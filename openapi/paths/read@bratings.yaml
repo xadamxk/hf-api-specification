@@ -1,8 +1,8 @@
 post:
   tags:
     - read
-  summary: Returns information relating to bratings(s).
-  description: Returns information relating to bratings(s).
+  summary: Returns information relating to brating(s).
+  description: Returns information relating to brating(s).
   requestBody:
     required: true
     content:
@@ -22,7 +22,7 @@ post:
                   amount: true
                   message: true
         schema:
-          $ref: ..\components\schemas\AskBratings.yaml
+          $ref: ..\components\schemas\BratingsAsk.yaml
   responses:
     "200":
       description: Brating(s) info

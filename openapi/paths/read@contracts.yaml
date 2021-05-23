@@ -1,8 +1,8 @@
 post:
   tags:
     - read
-  summary: Returns information relating to contracts.
-  description: Returns information relating to contracts.
+  summary: Returns information relating to contract(s).
+  description: Returns information relating to contract(s).
   requestBody:
     required: true
     content:
@@ -23,7 +23,7 @@ post:
                   timeout: true
                   status: true
         schema:
-          $ref: ..\components\schemas\AskContracts.yaml
+          $ref: ..\components\schemas\ContractsAsk.yaml
   responses:
     "200":
       description: Contract(s) info

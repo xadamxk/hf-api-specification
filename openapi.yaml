@@ -303,7 +303,7 @@ paths:
                 summary: return current user's username and usergroup
                 value: { "asks": { "me": { "uid": true, "usergroup": true } } }
             schema:
-              $ref: "#/components/schemas/AskMe"
+              $ref: "#/components/schemas/MeAsk"
       responses:
         "200": # status code
           description: Me info

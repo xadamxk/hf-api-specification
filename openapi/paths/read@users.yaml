@@ -18,14 +18,14 @@ post:
                   username: true
                   postnum: true
         schema:
-          $ref: ..\components\schemas\AskUsers.yaml
+          $ref: ..\components\schemas\UsersAsk.yaml
   responses:
-    '200':
+    "200":
       description: User(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

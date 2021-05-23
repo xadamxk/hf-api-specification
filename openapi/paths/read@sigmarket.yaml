@@ -1,18 +1,18 @@
 post:
   tags:
     - read
-  summary: Returns information relating to byte(s).
-  description: Returns information relating to byte(s).
+  summary: Returns information for provided sigmarket(s).
+  description: Returns information for provided sigmarket(s).
   requestBody:
     required: true
     content:
       application/json:
         examples:
         schema:
-          $ref: ..\components\schemas\BytesAsk.yaml
+          $ref: ..\components\schemas\SigmarketAsk.yaml
   responses:
     "200":
-      description: Forum(s) info
+      description: Sigmarket(s) info
       headers:
         x-rate-limit-remaining:
           schema:

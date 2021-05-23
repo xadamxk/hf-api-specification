@@ -17,14 +17,14 @@ post:
                     - 59852445
                   message: true
         schema:
-          $ref: ..\components\schemas\AskPosts.yaml
+          $ref: ..\components\schemas\PostsAsk.yaml
   responses:
-    '200':
+    "200":
       description: Post(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

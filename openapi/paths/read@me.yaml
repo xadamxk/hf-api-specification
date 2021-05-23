@@ -44,7 +44,7 @@ post:
                   totalpms: true
                   warningpoints: true
         schema:
-          $ref: ..\components\schemas\AskMe.yaml
+          $ref: ..\components\schemas\MeAsk.yaml
   responses:
     "200":
       description: Me info
@@ -53,5 +53,9 @@ post:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\Me.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

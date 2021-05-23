@@ -15,16 +15,19 @@ post:
                 forums:
                   _fid:
                     - 25
+                  fid: true
                   name: true
+                  description: true
+                  type: true
         schema:
-          $ref: ..\components\schemas\AskForums.yaml
+          $ref: ..\components\schemas\ForumsAsk.yaml
   responses:
-    '200':
+    "200":
       description: Forum(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
