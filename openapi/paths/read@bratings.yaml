@@ -22,7 +22,7 @@ post:
                   amount: true
                   message: true
         schema:
-          $ref: ..\components\schemas\BratingsAsk.yaml
+          $ref: ..\components\schemas\BratingsRequestAsk.yaml
   responses:
     "200":
       description: Brating(s) info

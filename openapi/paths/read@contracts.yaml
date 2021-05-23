@@ -23,7 +23,7 @@ post:
                   timeout: true
                   status: true
         schema:
-          $ref: ..\components\schemas\ContractsAsk.yaml
+          $ref: ..\components\schemas\ContractsRequestAsk.yaml
   responses:
     "200":
       description: Contract(s) info

@@ -24,7 +24,7 @@ post:
                   claimantnotes: true
                   defendantnotes: true
         schema:
-          $ref: ..\components\schemas\DisputesAsk.yaml
+          $ref: ..\components\schemas\DisputesRequestAsk.yaml
   responses:
     "200":
       description: Disputes(s) info

@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\Contracts.yaml
+    $ref: .\DisputesRequest.yaml

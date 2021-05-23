@@ -37,9 +37,9 @@ properties:
     description: "Signature market ID."
     type: boolean
   buyer:
-    $ref: .\Users.yaml
+    $ref: .\UsersRequest.yaml
   seller:
-    $ref: .\Users.yaml
+    $ref: .\UsersRequest.yaml
   startdate:
     type: boolean
   enddate:

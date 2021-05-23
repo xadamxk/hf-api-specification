@@ -17,7 +17,7 @@ post:
                     - 59852445
                   message: true
         schema:
-          $ref: ..\components\schemas\PostsAsk.yaml
+          $ref: ..\components\schemas\PostsRequestAsk.yaml
   responses:
     "200":
       description: Post(s) info

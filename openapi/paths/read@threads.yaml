@@ -17,7 +17,7 @@ post:
                     - 6083782
                   subject: true
         schema:
-          $ref: ..\components\schemas\ThreadsAsk.yaml
+          $ref: ..\components\schemas\ThreadsRequestAsk.yaml
   responses:
     "200":
       description: Thread(s) info

@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\Bytes.yaml
+    $ref: .\ContractsRequest.yaml
