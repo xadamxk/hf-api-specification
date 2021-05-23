@@ -15,6 +15,7 @@ post:
               asks:
                 me:
                   uid: true
+                  username: true
                   usergroup: true
           allInformation:
             summary: return all available data for current user
