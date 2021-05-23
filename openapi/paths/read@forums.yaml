@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - forums
   summary: Returns information for provided forum(s).
   description: Returns information for provided forum(s).
   requestBody:

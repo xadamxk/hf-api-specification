@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - sigmarket
   summary: Returns information for provided sigmarket(s) type Order.
   description: Returns information for provided sigmarket(s) type Order.
   requestBody:

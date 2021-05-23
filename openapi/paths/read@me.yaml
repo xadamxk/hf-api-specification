@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - me
   summary: Returns information for the current user.
   description: Returns information for the current user.
   requestBody:

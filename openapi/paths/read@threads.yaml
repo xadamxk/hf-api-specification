@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - threads
   summary: Returns information for provided thread(s).
   description: Returns information for provided thread(s).
   requestBody:

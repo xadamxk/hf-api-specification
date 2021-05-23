@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - users
   summary: Returns information for provided user(s).
   description: Returns information for provided user(s).
   requestBody:

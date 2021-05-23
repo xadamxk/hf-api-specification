@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - bratings
   summary: Returns information relating to brating(s).
   description: Returns information relating to brating(s).
   requestBody:

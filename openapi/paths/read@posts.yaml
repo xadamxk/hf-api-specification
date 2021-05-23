@@ -1,6 +1,7 @@
 post:
   tags:
     - read
+    - posts
   summary: Returns information for provided post(s).
   description: Returns information for provided post(s).
   requestBody:
