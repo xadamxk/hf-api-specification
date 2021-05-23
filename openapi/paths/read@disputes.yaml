@@ -1,0 +1,37 @@
+post:
+  tags:
+    - read
+  summary: Returns information relating to dispute(s).
+  description: Returns information relating to dispute(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          disputes:
+            summary: return dispute information.
+            value:
+              asks:
+                disputes:
+                  _cdid: ["84"]
+                  cdid: true
+                  contractid: true
+                  claimantuid: true
+                  defendantuid: true
+                  dateline: true
+                  status: true
+                  dispute_tid: true
+                  claimantnotes: true
+                  defendantnotes: true
+        schema:
+          $ref: ..\components\schemas\AskDisputes.yaml
+  responses:
+    "200":
+      description: Disputes(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,14 +1,14 @@
 type: object
-description: "Permission: Posts Permissions"
+description: "Permission: ? Permissions"
 properties:
   _cid:
     type: array
-    description: "Contract ids."
+    description: "Contract id(s)."
     items:
       type: number
   _uid:
     type: array
-    description: "Optional _page & _perpage parameters"
+    description: "Optional _page & _perpage parameters."
     items:
       type: number
   _page:

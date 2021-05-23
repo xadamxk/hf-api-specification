@@ -28,3 +28,5 @@ paths:
     $ref: paths\read@bytes.yaml
   /read/contracts:
     $ref: paths\read@contracts.yaml
+  /read/disputes:
+    $ref: paths\read@disputes.yaml

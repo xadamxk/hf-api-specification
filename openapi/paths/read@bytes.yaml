@@ -1,8 +1,8 @@
 post:
   tags:
     - read
-  summary: Returns information relating to bytes.
-  description: Returns information relating to bytes.
+  summary: Returns information relating to byte(s).
+  description: Returns information relating to byte(s).
   requestBody:
     required: true
     content:

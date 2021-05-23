@@ -9,7 +9,7 @@ post:
       application/json:
         examples:
           contract:
-            summary: return contract information
+            summary: return contract information.
             value:
               asks:
                 contracts:
