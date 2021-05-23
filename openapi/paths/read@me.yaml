@@ -8,28 +8,50 @@ post:
     content:
       application/json:
         examples:
-          uid:
-            summary: return current user's uuid
-            value:
-              asks:
-                me:
-                  uid: true
           usernameUsergroup:
-            summary: return current user's username and usergroup
+            summary: return current user's uid, username, and usergroup
             value:
               asks:
                 me:
                   uid: true
                   usergroup: true
+          allInformation:
+            summary: return all available data for current user
+            value:
+              asks:
+                me:
+                  uid: true
+                  username: true
+                  usergroup: true
+                  displayGroup: true
+                  additionalgroups: true
+                  postnum: true
+                  awards: true
+                  bytes: true
+                  threadnum: true
+                  avatar: true
+                  avatardimensions: true
+                  avatartype: true
+                  lastvisit: true
+                  usertitle: true
+                  website: true
+                  timeonline: true
+                  reputation: true
+                  referrals: true
+                  lastactive: true
+                  unreadpms: true
+                  invisible: true
+                  totalpms: true
+                  warningpoints: true
         schema:
           $ref: ..\components\schemas\AskMe.yaml
   responses:
-    '200':
+    "200":
       description: Me info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
