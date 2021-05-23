@@ -32,3 +32,7 @@ paths:
     $ref: paths\read@disputes.yaml
   /read/bratings:
     $ref: paths\read@bratings.yaml
+  /read/sigmarket-order:
+    $ref: paths\read@sigmarketOrder.yaml
+  /read/sigmarket-market:
+    $ref: paths\read@sigmarketMarket.yaml

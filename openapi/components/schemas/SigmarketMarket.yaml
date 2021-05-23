@@ -1,0 +1,37 @@
+type: object
+description: "Permission: ? Permissions"
+properties:
+  _type:
+    type: string
+    enum: ["market"]
+    description: "Market: available signatures for purchase."
+  _uid:
+    type: array
+    description: Search directly by User ID(s).
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  uid:
+    type: boolean
+  user:
+    $ref: .\Users.yaml
+  price:
+    type: boolean
+  duration:
+    type: boolean
+  active:
+    type: boolean
+  sig:
+    type: boolean
+  dateadded:
+    type: boolean
+  ppd:
+    type: boolean
+    description: "Price per day."

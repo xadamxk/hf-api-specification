@@ -1,18 +1,18 @@
 post:
   tags:
     - read
-  summary: Returns information for provided sigmarket(s).
-  description: Returns information for provided sigmarket(s).
+  summary: Returns information for provided signature market(s) type market.
+  description: Returns information for provided signature market(s) type market.
   requestBody:
     required: true
     content:
       application/json:
         examples:
         schema:
-          $ref: ..\components\schemas\SigmarketAsk.yaml
+          $ref: ..\components\schemas\SigmarketMarketAsk.yaml
   responses:
     "200":
-      description: Sigmarket(s) info
+      description: Sigmarket(s) market info
       headers:
         x-rate-limit-remaining:
           schema:

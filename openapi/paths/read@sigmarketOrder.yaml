@@ -1,0 +1,22 @@
+post:
+  tags:
+    - read
+  summary: Returns information for provided sigmarket(s) type Order.
+  description: Returns information for provided sigmarket(s) type Order.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+        schema:
+          $ref: ..\components\schemas\SigmarketOrderAsk.yaml
+  responses:
+    "200":
+      description: Sigmarket(s) order info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

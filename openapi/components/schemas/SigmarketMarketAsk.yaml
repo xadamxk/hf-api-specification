@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\Sigmarket.yaml
+    $ref: .\SigmarketMarket.yaml
