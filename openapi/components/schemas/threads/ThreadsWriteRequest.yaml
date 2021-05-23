@@ -1,0 +1,9 @@
+type: object
+description: "Permission: ? Permissions"
+properties:
+  _fid:
+    type: string
+  _subject:
+    type: string
+  _message:
+    type: string

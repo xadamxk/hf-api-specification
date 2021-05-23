@@ -1,0 +1,24 @@
+type: object
+description: "Permission: ? Permissions"
+properties:
+  threads:
+    type: array
+    description: Threads response.
+    items:
+      type: object
+      properties:
+        tid:
+          type: string
+        uid:
+          type: string
+        subject:
+          type: string
+        dateline:
+          type: string
+        firstpost:
+          type: object
+          properties:
+            pid:
+              type: string
+            message:
+              type: string

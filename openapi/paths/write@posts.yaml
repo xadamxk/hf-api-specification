@@ -2,14 +2,14 @@ post:
   tags:
     - write
     - posts
-  summary: Write information to a provided thread..
+  summary: Write information to a provided thread.
   description: Write information to a provided thread.
   requestBody:
     required: true
     content:
       application/json:
         examples:
-          testApiThread:
+          testApiPost:
             summary: post on the HF API test thread
             value:
               asks:
