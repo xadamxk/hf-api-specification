@@ -14,25 +14,25 @@ components:
 security:
   - bearerAuth: []
 paths:
-  /read/me:
-    $ref: paths\read@me.yaml
-  /read/forums:
-    $ref: paths\read@forums.yaml
-  /read/threads:
-    $ref: paths\read@threads.yaml
-  /read/posts:
-    $ref: paths\read@posts.yaml
-  /read/users:
-    $ref: paths\read@users.yaml
+  /read/bratings:
+    $ref: paths\read@bratings.yaml
   /read/bytes:
     $ref: paths\read@bytes.yaml
   /read/contracts:
     $ref: paths\read@contracts.yaml
   /read/disputes:
     $ref: paths\read@disputes.yaml
-  /read/bratings:
-    $ref: paths\read@bratings.yaml
-  /read/sigmarket-order:
-    $ref: paths\read@sigmarketOrder.yaml
+  /read/forums:
+    $ref: paths\read@forums.yaml
+  /read/me:
+    $ref: paths\read@me.yaml
+  /read/posts:
+    $ref: paths\read@posts.yaml
   /read/sigmarket-market:
     $ref: paths\read@sigmarketMarket.yaml
+  /read/sigmarket-order:
+    $ref: paths\read@sigmarketOrder.yaml
+  /read/threads:
+    $ref: paths\read@threads.yaml
+  /read/users:
+    $ref: paths\read@users.yaml
