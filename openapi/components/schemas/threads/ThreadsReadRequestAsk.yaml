@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\SigmarketMarketRequest.yaml
+    $ref: .\ThreadsReadRequest.yaml

@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\BytesRequest.yaml
+    $ref: .\DisputesReadRequest.yaml

@@ -21,7 +21,7 @@ properties:
   uid:
     type: boolean
   user:
-    $ref: ..\users\UsersRequest.yaml
+    $ref: ..\users\UsersReadRequest.yaml
   price:
     type: boolean
   duration:

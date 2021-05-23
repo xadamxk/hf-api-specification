@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\BratingsRequest.yaml
+    $ref: .\BratingsReadRequest.yaml

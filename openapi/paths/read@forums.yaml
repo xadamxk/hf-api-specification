@@ -20,7 +20,7 @@ post:
                   description: true
                   type: true
         schema:
-          $ref: ..\components\schemas\forums\ForumsRequestAsk.yaml
+          $ref: ..\components\schemas\forums\ForumsReadRequestAsk.yaml
   responses:
     "200":
       description: Forum(s) info

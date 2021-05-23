@@ -44,7 +44,7 @@ post:
                   totalpms: true
                   warningpoints: true
         schema:
-          $ref: ..\components\schemas\me\MeRequestAsk.yaml
+          $ref: ..\components\schemas\me\MeReadRequestAsk.yaml
   responses:
     "200":
       description: Me info
@@ -56,6 +56,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\me\MeRequest.yaml'
+            $ref: '..\components\schemas\me\MeReadRequest.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

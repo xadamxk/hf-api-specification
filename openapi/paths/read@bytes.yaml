@@ -9,7 +9,7 @@ post:
       application/json:
         examples:
         schema:
-          $ref: ..\components\schemas\bytes\BytesRequestAsk.yaml
+          $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
   responses:
     "200":
       description: Forum(s) info

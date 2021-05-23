@@ -9,7 +9,7 @@ post:
       application/json:
         examples:
         schema:
-          $ref: ..\components\schemas\sigmarket\SigmarketOrderRequestAsk.yaml
+          $ref: ..\components\schemas\sigmarket\SigmarketOrderReadRequestAsk.yaml
   responses:
     "200":
       description: Sigmarket(s) order info
