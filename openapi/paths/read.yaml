@@ -1,0 +1,43 @@
+post:
+  tags:
+    - read
+  summary: Returns all available read fields.
+  description: Returns all available read fields.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          all:
+            summary: Return summary data for various endpoints.
+            value:
+              asks:
+                me:
+                  uid: true
+                  usergroup: true
+                bratings:
+                  _crid: ["244577"]
+                  contractid: true
+        schema:
+          anyOf:
+            - $ref: ..\components\schemas\bratings\BratingsReadRequestAsk.yaml
+            - $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
+            - $ref: ..\components\schemas\contracts\ContractsReadRequestAsk.yaml
+            - $ref: ..\components\schemas\disputes\DisputesReadRequestAsk.yaml
+            - $ref: ..\components\schemas\forums\ForumsReadRequestAsk.yaml
+            - $ref: ..\components\schemas\me\MeReadRequestAsk.yaml
+            - $ref: ..\components\schemas\posts\PostsReadRequestAsk.yaml
+            - $ref: ..\components\schemas\sigmarket\SigmarketMarketReadRequestAsk.yaml
+            - $ref: ..\components\schemas\sigmarket\SigmarketOrderReadRequestAsk.yaml
+            - $ref: ..\components\schemas\threads\ThreadsReadRequestAsk.yaml
+            - $ref: ..\components\schemas\users\UsersReadRequestAsk.yaml
+  responses:
+    "200":
+      description: All available read fields.
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml
