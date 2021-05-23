@@ -18,7 +18,7 @@ post:
                   username: true
                   postnum: true
         schema:
-          $ref: ..\components\schemas\UsersRequestAsk.yaml
+          $ref: ..\components\schemas\users\UsersRequestAsk.yaml
   responses:
     "200":
       description: User(s) info
