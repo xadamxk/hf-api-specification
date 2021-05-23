@@ -1,8 +1,11 @@
 openapi: 3.0.0
 info:
   title: HF API
-  description: OpenAPI specification for the Hack Forums API.
+  description: OpenAPI specification for the Hack Forums API.<br><br>Requires access token obtained via <a href="https://hackforums.net/usercp.php?action=apideveloper">HF API Developer Portal</a> to use 'Try it out' functionality.
   version: 2.0.0
+  contract:
+    name: "xadamxk"
+    url: "https://hackforums.net/member.php?action=profile&uid=1306528"
 servers:
   - url: "https://hackforums.net/api/v2"
     description: HF API Version 2
