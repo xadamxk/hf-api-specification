@@ -28,10 +28,10 @@ paths:
     $ref: paths\read@me.yaml
   /read/posts:
     $ref: paths\read@posts.yaml
-  /read/sigmarket-market:
-    $ref: paths\read@sigmarketMarket.yaml
-  /read/sigmarket-order:
-    $ref: paths\read@sigmarketOrder.yaml
+  /read/sigmarket/market:
+    $ref: paths\read@sigmarket-market.yaml
+  /read/sigmarket/order:
+    $ref: paths\read@sigmarket-order.yaml
   /read/threads:
     $ref: paths\read@threads.yaml
   /read/users:
