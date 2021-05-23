@@ -1,0 +1,35 @@
+post:
+  tags:
+    - read
+  summary: Returns information relating to bratings(s).
+  description: Returns information relating to bratings(s).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          disputes:
+            summary: return individual brating information.
+            value:
+              asks:
+                bratings:
+                  _crid: ["244577"]
+                  crid: true
+                  contractid: true
+                  fromid: true
+                  toid: true
+                  dateline: true
+                  amount: true
+                  message: true
+        schema:
+          $ref: ..\components\schemas\AskBratings.yaml
+  responses:
+    "200":
+      description: Brating(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

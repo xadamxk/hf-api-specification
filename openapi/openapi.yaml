@@ -30,3 +30,5 @@ paths:
     $ref: paths\read@contracts.yaml
   /read/disputes:
     $ref: paths\read@disputes.yaml
+  /read/bratings:
+    $ref: paths\read@bratings.yaml

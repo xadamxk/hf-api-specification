@@ -9,7 +9,7 @@ post:
       application/json:
         examples:
           disputes:
-            summary: return dispute information.
+            summary: return individual dispute information.
             value:
               asks:
                 disputes:
