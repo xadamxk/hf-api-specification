@@ -1,0 +1,17 @@
+type: object
+description: "Permission: Posts Permissions"
+properties:
+  posts:
+    type: array
+    description: Posts response.
+    items:
+      type: object
+      properties:
+        pid:
+          type: string
+        tid:
+          type: string
+        uid:
+          type: string
+        message:
+          type: string

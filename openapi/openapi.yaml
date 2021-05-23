@@ -38,3 +38,5 @@ paths:
     $ref: paths\read@threads.yaml
   /read/users:
     $ref: paths\read@users.yaml
+  /write/posts:
+    $ref: paths\write@posts.yaml
