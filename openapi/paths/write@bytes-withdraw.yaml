@@ -2,21 +2,21 @@ post:
   tags:
     - write
     - bytes
-  summary: Withdrawl specified bytes to API Client Vault. (Minimum 100)
-  description: Withdrawl specified bytes to API Client Vault. (Minimum 100)
+  summary: Withdraw specified bytes to API Client Vault. (Minimum 100)
+  description: Withdraw specified bytes to API Client Vault. (Minimum 100)
   requestBody:
     required: true
     content:
       application/json:
         examples:
           depositBytes:
-            summary: withdrawl 100 bytes.
+            summary: withdraw 100 bytes.
             value:
               asks:
                 bytes:
-                  _deposit: 100
+                  _withdraw: 100
         schema:
-          $ref: ..\components\schemas\bytes\BytesWithdrawlWriteRequestAsk.yaml
+          $ref: ..\components\schemas\bytes\BytesWithdrawWriteRequestAsk.yaml
   responses:
     "200":
       description: Write Byte(s) info

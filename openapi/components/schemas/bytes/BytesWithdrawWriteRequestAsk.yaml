@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\BytesWithdrawlWriteRequest.yaml
+    $ref: .\BytesWithdrawWriteRequest.yaml
