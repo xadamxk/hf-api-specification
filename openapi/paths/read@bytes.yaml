@@ -20,16 +20,19 @@ post:
                   dateline: true
                   type: true
                   reason: true
-                  from: true
         schema:
           $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
   responses:
     "200":
-      description: Forum(s) info
+      description: Bytes(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\bytes\BytesReadResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

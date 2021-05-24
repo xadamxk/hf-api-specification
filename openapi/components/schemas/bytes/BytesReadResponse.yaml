@@ -1,0 +1,31 @@
+type: object
+description: ""
+properties:
+  bytes:
+    type: array
+    description: Bytes response.
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        amount:
+          type: string
+        dateline:
+          type: string
+        type:
+          type: string
+        reason:
+          type: string
+        from:
+          type: array
+          items:
+            type: string
+        to:
+          type: array
+          items:
+            type: string
+        post:
+          type: array
+          items:
+            type: string
