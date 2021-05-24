@@ -15,8 +15,23 @@ post:
                 users:
                   _uid:
                     - 1
+                  uid: true
                   username: true
+                  usergroup: true
+                  displaygroup: true
+                  additionalgroups: true
                   postnum: true
+                  awards: true
+                  myps: true
+                  threadnum: true
+                  avatar: true
+                  avatardimensions: true
+                  avatartype: true
+                  usertitle: true
+                  website: true
+                  timeonline: true
+                  reputation: true
+                  referrals: true
         schema:
           $ref: ..\components\schemas\users\UsersReadRequestAsk.yaml
   responses:
