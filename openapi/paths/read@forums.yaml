@@ -29,5 +29,9 @@ post:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\forums\ForumsReadResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
