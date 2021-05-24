@@ -57,6 +57,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\me\MeReadRequest.yaml'
+            $ref: '..\components\schemas\me\MeReadResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

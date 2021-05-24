@@ -1,0 +1,55 @@
+type: object
+description: ""
+properties:
+  me:
+    type: array
+    description: Bratings response.
+    items:
+      type: object
+      properties:
+        uid:
+          type: string
+        username:
+          type: string
+        usergroup:
+          type: string
+        displayGroup:
+          type: string
+        additionalgroups:
+          type: string
+        postnum:
+          type: string
+        awards:
+          type: string
+        bytes:
+          type: string
+        threadnum:
+          type: string
+        avatar:
+          type: string
+        avatardimensions:
+          type: string
+        avatartype:
+          type: string
+        lastvisit:
+          type: string
+        usertitle:
+          type: string
+        website:
+          type: string
+        timeonline:
+          type: string
+        reputation:
+          type: string
+        referrals:
+          type: string
+        lastactive:
+          type: string
+        unreadpms:
+          type: string
+        invisible:
+          type: string
+        totalpms:
+          type: string
+        warningpoints:
+          type: string
