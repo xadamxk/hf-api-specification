@@ -1,0 +1,33 @@
+post:
+  tags:
+    - write
+    - bytes
+  summary: Withdrawl specified bytes to API Client Vault. (Minimum 100)
+  description: Withdrawl specified bytes to API Client Vault. (Minimum 100)
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          depositBytes:
+            summary: withdrawl 100 bytes.
+            value:
+              asks:
+                bytes:
+                  _deposit: 100
+        schema:
+          $ref: ..\components\schemas\bytes\BytesWithdrawlWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Write Byte(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\bytes\BytesWriteResponse.yaml'
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

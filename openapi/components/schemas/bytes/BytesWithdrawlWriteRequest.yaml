@@ -1,0 +1,7 @@
+type: object
+description: "Permission: Bytes Write Permissions"
+required:
+  - _withdrawl
+properties:
+  _withdrawl:
+    type: number
