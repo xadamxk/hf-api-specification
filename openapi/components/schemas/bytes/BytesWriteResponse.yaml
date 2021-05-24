@@ -1,0 +1,12 @@
+type: object
+description: ""
+properties:
+  bytes:
+    type: array
+    description: Bytes response.
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "Bytes transaction id."
