@@ -9,7 +9,7 @@ properties:
   _amount:
     type: string
   _pid:
-    type: number
+    type: string
     description: Post ID to link donation to.
   _reason:
     type: string
