@@ -1,0 +1,23 @@
+type: object
+description: ""
+properties:
+  contracts:
+    type: array
+    description: Contracts response.
+    items:
+      type: object
+      properties:
+        cid:
+          type: string
+        dateline:
+          type: string
+        otherdateline:
+          type: string
+        public:
+          type: string
+        timeout_days:
+          type: string
+        timeout:
+          type: string
+        status:
+          type: string
