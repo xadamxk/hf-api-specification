@@ -47,3 +47,5 @@ paths:
     $ref: paths\write@threads.yaml
   /write/bytes:
     $ref: paths\write@bytes.yaml
+  /write/bytes/deposit:
+    $ref: paths\write@bytes-deposit.yaml
