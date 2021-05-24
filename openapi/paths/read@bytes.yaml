@@ -1,6 +1,5 @@
 post:
   tags:
-    - read
     - bytes
   summary: Returns information relating to byte(s).
   description: Returns information relating to byte(s).

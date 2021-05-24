@@ -1,6 +1,5 @@
 post:
   tags:
-    - read
   summary: Returns all available read fields.
   description: Returns all available read fields.
   requestBody:

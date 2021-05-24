@@ -1,6 +1,5 @@
 post:
   tags:
-    - write
     - threads
   summary: Create thread given provided information.
   description: Create thread given provided information.

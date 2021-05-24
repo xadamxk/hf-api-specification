@@ -1,6 +1,5 @@
 post:
   tags:
-    - read
     - contracts
   summary: Returns information relating to contract(s).
   description: Returns information relating to contract(s).

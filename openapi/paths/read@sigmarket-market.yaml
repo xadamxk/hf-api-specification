@@ -1,6 +1,5 @@
 post:
   tags:
-    - read
     - sigmarket
   summary: Returns information for provided signature market(s) type market.
   description: Returns information for provided signature market(s) type market.

@@ -1,6 +1,5 @@
 post:
   tags:
-    - write
     - bytes
   summary: Deposit specified bytes to API Client Vault. (Minimum 100)
   description: Deposit specified bytes to API Client Vault. (Minimum 100)

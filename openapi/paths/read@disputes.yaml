@@ -1,6 +1,5 @@
 post:
   tags:
-    - read
     - disputes
   summary: Returns information relating to dispute(s).
   description: Returns information relating to dispute(s).

@@ -1,6 +1,5 @@
 post:
   tags:
-    - write
     - bytes
   summary: Send bytes to provided user.
   description: Send bytes to provided user.

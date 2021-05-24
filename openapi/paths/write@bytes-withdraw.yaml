@@ -1,6 +1,5 @@
 post:
   tags:
-    - write
     - bytes
   summary: Withdraw specified bytes to API Client Vault. (Minimum 100)
   description: Withdraw specified bytes to API Client Vault. (Minimum 100)
