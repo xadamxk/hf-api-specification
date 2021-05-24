@@ -1,0 +1,29 @@
+type: object
+description: ""
+properties:
+  posts:
+    type: array
+    description: Posts response.
+    items:
+      type: object
+      properties:
+        pid:
+          type: string
+        tid:
+          type: string
+        uid:
+          type: string
+        fid:
+          type: string
+        dateline:
+          type: string
+        message:
+          type: string
+        subject:
+          type: string
+        edituid:
+          type: string
+        edittime:
+          type: string
+        editreason:
+          type: string

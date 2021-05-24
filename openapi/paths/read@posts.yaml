@@ -9,13 +9,22 @@ post:
       application/json:
         examples:
           lounge:
-            summary: return HF API post content
+            summary: return HF API post information
             value:
               asks:
                 posts:
                   _pid:
                     - 59852445
+                  pid: true
+                  tid: true
+                  uid: true
+                  fid: true
+                  dateline: true
                   message: true
+                  subject: true
+                  edituid: true
+                  edittime: true
+                  editreason: true
         schema:
           $ref: ..\components\schemas\posts\PostsReadRequestAsk.yaml
   responses:
@@ -26,5 +35,9 @@ post:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\posts\PostsReadResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
