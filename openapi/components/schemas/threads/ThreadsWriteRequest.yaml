@@ -1,5 +1,5 @@
 type: object
-description: "Permission: ? Permissions"
+description: "Permission: Posts Write Permissions"
 properties:
   _fid:
     type: string
