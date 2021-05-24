@@ -1,0 +1,23 @@
+type: object
+description: ""
+properties:
+  bratings:
+    type: array
+    description: Bratings response.
+    items:
+      type: object
+      properties:
+        crid:
+          type: string
+        contractid:
+          type: string
+        fromid:
+          type: string
+        toid:
+          type: string
+        dateline:
+          type: string
+        amount:
+          type: string
+        message:
+          type: string

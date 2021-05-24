@@ -31,5 +31,9 @@ post:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\bratings\BratingsWriteResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
