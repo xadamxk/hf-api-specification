@@ -9,13 +9,30 @@ post:
       application/json:
         examples:
           lounge:
-            summary: return HF API Thread name
+            summary: return HF API Thread information
             value:
               asks:
                 threads:
                   _tid:
                     - 6083782
+                  tid: true
+                  uid: true
+                  fid: true
                   subject: true
+                  closed: true
+                  numreplies: true
+                  views: true
+                  dateline: true
+                  firstpost: true
+                  lastpost: true
+                  lastposter: true
+                  lastposteruid: true
+                  prefix: true
+                  icon: true
+                  poll: true
+                  username: true
+                  sticky: true
+                  bestpid: true
         schema:
           $ref: ..\components\schemas\threads\ThreadsReadRequestAsk.yaml
   responses:
@@ -26,5 +43,9 @@ post:
           schema:
             type: integer
             description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\threads\ThreadsReadResponse.yaml'
     "401":
       $ref: ..\components\responses\UnauthorizedError.yaml
