@@ -51,3 +51,5 @@ paths:
     $ref: paths\write@bytes-deposit.yaml
   /write/bytes/withdraw:
     $ref: paths\write@bytes-withdraw.yaml
+  /write/bytes/bump:
+    $ref: paths\write@bytes-bump.yaml

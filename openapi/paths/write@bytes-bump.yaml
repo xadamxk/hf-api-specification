@@ -1,24 +1,24 @@
 post:
   tags:
     - bytes
-  summary: Deposit specified bytes to API Client Vault (Minimum 100).
-  description: Deposit specified bytes to API Client Vault (Minimum 100).
+  summary: Bump specified thread using Stanley Byte Bump feature (100 bytes).
+  description: Bump specified thread using Stanley Byte Bump feature (100 bytes).
   requestBody:
     required: true
     content:
       application/json:
         examples:
-          depositBytes:
-            summary: deposit 100 bytes.
+          byteBump:
+            summary: Bump thread.
             value:
               asks:
                 bytes:
-                  _deposit: 100
+                  _bump: 6152837
         schema:
-          $ref: ..\components\schemas\bytes\BytesDepositWriteRequestAsk.yaml
+          $ref: ..\components\schemas\bytes\BytesBumpWriteRequestAsk.yaml
   responses:
     "200":
-      description: Write Byte(s) info
+      description: Write Byte(s) Bump info
       headers:
         x-rate-limit-remaining:
           schema:

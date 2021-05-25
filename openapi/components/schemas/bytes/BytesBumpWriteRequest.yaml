@@ -1,0 +1,7 @@
+type: object
+description: "Permission: Bytes Write Permissions"
+required:
+  - _bump
+properties:
+  _bump:
+    type: number
