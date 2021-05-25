@@ -3,7 +3,7 @@ const { execSync } = require('child_process');
 const chokidar = require('chokidar');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-function debounce(func, timeout){
+function debounce(func, timeout) {
   let timer;
 
   return (...args) => {
@@ -39,7 +39,7 @@ class OpenApiPlugin {
 module.exports = {
   mode: 'development',
   entry: {
-    app: require.resolve('./docs/swagger/index'),
+    app: require.resolve('./docs/index'),
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -65,8 +65,8 @@ module.exports = {
   plugins: [
     new OpenApiPlugin(),
     new HtmlWebpackPlugin({
-      favicon: path.resolve(__dirname, 'docs/swagger/favicon.png'),
-      template: path.resolve(__dirname, 'docs/swagger/index.html'),
+      favicon: path.resolve(__dirname, 'docs/favicon.png'),
+      template: path.resolve(__dirname, 'docs/index.html'),
     }),
   ],
   output: {
