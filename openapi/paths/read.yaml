@@ -1,7 +1,7 @@
 post:
   tags:
-  summary: Returns all available read fields.
-  description: Returns all available read fields.
+  summary: Returns all available, provided read fields.
+  description: Returns all available, provided read fields.
   requestBody:
     required: true
     content:
