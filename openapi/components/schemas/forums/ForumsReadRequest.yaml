@@ -1,5 +1,5 @@
 type: object
-description: 'Permission: Posts Permissions'
+description: "Permission: Posts Permissions"
 properties:
   _fid:
     type: array

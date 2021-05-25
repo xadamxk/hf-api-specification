@@ -1,0 +1,70 @@
+type: object
+description: "Permission: Contracts Permissions"
+properties:
+  _cdid:
+    type: array
+    description: "Dispute id(s)."
+    items:
+      type: number
+  _cid:
+    type: array
+    description: "Contract id(s)."
+    items:
+      type: number
+  _uid:
+    type: array
+    description: "User id(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _claimantuid:
+    type: array
+    description: "Claimant uid(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _defendantuid:
+    type: array
+    description: "Defendant uid(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  cdid:
+    type: boolean
+  contractid:
+    type: boolean
+  claimantuid:
+    type: boolean
+  defendantuid:
+    type: boolean
+  dateline:
+    type: boolean
+  status:
+    type: boolean
+  dispute_tid:
+    type: boolean
+  claimantnotes:
+    type: boolean
+  defendantnotes:
+    type: boolean
+  contract:
+    type: array
+    items:
+      type: string
+  claimant:
+    type: array
+    items:
+      type: string
+  defendant:
+    type: array
+    items:
+      type: string
+  dispute_thread:
+    type: array
+    items:
+      type: string

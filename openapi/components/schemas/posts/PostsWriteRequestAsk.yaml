@@ -1,0 +1,5 @@
+type: object
+description: "response after creating a post"
+properties:
+  asks:
+    $ref: .\PostsWriteRequest.yaml

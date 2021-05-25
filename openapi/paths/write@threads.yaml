@@ -1,0 +1,34 @@
+post:
+  tags:
+    - threads
+  summary: Create thread given provided information.
+  description: Create thread given provided information.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          testApiThread:
+            summary: Create a test thread in the HF API section.
+            value:
+              asks:
+                threads:
+                  _fid: 375
+                  _subject: "Test Thread"
+                  _message: Using the [url=https://github.com/xadamxk/hf-api-specification]hf-api-specification[/url] project to create a HF API test thread.
+        schema:
+          $ref: ..\components\schemas\threads\ThreadsWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Write Threads(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\threads\ThreadsWriteResponse.yaml'
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,0 +1,12 @@
+type: object
+description: ""
+properties:
+  sigmarket:
+    type: array
+    description: Sigmarket response.
+    items:
+      type: object
+      properties:
+        test:
+          type: string
+          # TODO: Updated response

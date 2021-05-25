@@ -1,0 +1,53 @@
+type: object
+description: "Permission: Bytes Permissions"
+properties:
+  _id:
+    type: array
+    items:
+      type: number
+  _uid:
+    type: array
+    description: "Optional _page & _perpage parameters"
+    items:
+      type: number
+  _from:
+    type: array
+    description: "Optional _page & _perpage parameters"
+    items:
+      type: number
+  _to:
+    type: array
+    description: "Optional _page & _perpage parameters"
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  id:
+    type: number
+    description: "Transaction id."
+  amount:
+    type: number
+  dateline:
+    type: number
+  type:
+    type: string
+  reason:
+    type: string
+  from:
+    type: array
+    items:
+      type: string
+  to:
+    type: array
+    items:
+      type: string
+  post:
+    type: array
+    items:
+      type: string

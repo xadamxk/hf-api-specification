@@ -1,0 +1,12 @@
+type: object
+description: "Permission: Posts Write Permissions"
+required:
+  - _tid
+  - _message
+properties:
+  _tid:
+    type: number
+    description: Thread ID to post on.
+  _message:
+    type: string
+    description: Post content.

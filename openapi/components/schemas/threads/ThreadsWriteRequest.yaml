@@ -1,0 +1,13 @@
+type: object
+description: "Permission: Posts Write Permissions"
+required:
+  - _fid
+  - _subject
+  - _message
+properties:
+  _fid:
+    type: string
+  _subject:
+    type: string
+  _message:
+    type: string

@@ -1,6 +1,6 @@
 post:
   tags:
-    - read
+    - users
   summary: Returns information for provided user(s).
   description: Returns information for provided user(s).
   requestBody:
@@ -15,17 +15,32 @@ post:
                 users:
                   _uid:
                     - 1
+                  uid: true
                   username: true
+                  usergroup: true
+                  displaygroup: true
+                  additionalgroups: true
                   postnum: true
+                  awards: true
+                  myps: true
+                  threadnum: true
+                  avatar: true
+                  avatardimensions: true
+                  avatartype: true
+                  usertitle: true
+                  website: true
+                  timeonline: true
+                  reputation: true
+                  referrals: true
         schema:
-          $ref: ..\components\schemas\AskUsers.yaml
+          $ref: ..\components\schemas\users\UsersReadRequestAsk.yaml
   responses:
-    '200':
+    "200":
       description: User(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

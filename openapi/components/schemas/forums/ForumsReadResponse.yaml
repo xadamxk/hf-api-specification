@@ -1,0 +1,17 @@
+type: object
+description: ""
+properties:
+  forums:
+    type: array
+    description: Forums response.
+    items:
+      type: object
+      properties:
+        fid:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        type:
+          type: string

@@ -1,0 +1,43 @@
+type: object
+description: ""
+properties:
+  users:
+    type: array
+    description: Users response.
+    items:
+      type: object
+      properties:
+        uid:
+          type: string
+        username:
+          type: string
+        usergroup:
+          type: string
+        displaygroup:
+          type: string
+        additionalgroups:
+          type: string
+        postnum:
+          type: string
+        awards:
+          type: string
+        myps:
+          type: string
+        threadnum:
+          type: string
+        avatar:
+          type: string
+        avatardimensions:
+          type: string
+        avatartype:
+          type: string
+        usertitle:
+          type: string
+        website:
+          type: string
+        timeonline:
+          type: string
+        reputation:
+          type: string
+        referrals:
+          type: string

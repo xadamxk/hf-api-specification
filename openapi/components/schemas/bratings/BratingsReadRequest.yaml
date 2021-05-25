@@ -1,0 +1,62 @@
+type: object
+description: "Permission: Contracts Permissions"
+properties:
+  _crid:
+    type: array
+    description: "Brating id(s)."
+    items:
+      type: number
+  _cid:
+    type: array
+    description: "Contract id(s)."
+    items:
+      type: number
+  _uid:
+    type: array
+    description: "User id(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _from:
+    type: array
+    description: "From user id(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _to:
+    type: array
+    description: "To user id(s). Optional _page & _perpage parameters."
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  crid:
+    type: boolean
+  contractid:
+    type: boolean
+  fromid:
+    type: boolean
+  toid:
+    type: boolean
+  dateline:
+    type: boolean
+  amount:
+    type: boolean
+  message:
+    type: boolean
+  contract:
+    type: array
+    items:
+      type: string
+  from:
+    type: array
+    items:
+      type: string
+  to:
+    type: array
+    items:
+      type: string

@@ -1,5 +1,5 @@
 type: object
-description: 'Permission: Posts Permissions'
+description: "Permission: Posts Permissions"
 properties:
   _tid:
     type: array
@@ -13,12 +13,12 @@ properties:
       type: number
   _page:
     type: array
-    description: 'Optional: Used with _uid.'
+    description: "Optional: Used with _uid."
     items:
       type: number
   _perpage:
     type: array
-    description: 'Optional: Used with _uid.'
+    description: "Optional: Used with _uid."
     items:
       type: number
   tid:

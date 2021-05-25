@@ -1,5 +1,0 @@
-type: object
-description: ''
-properties:
-  asks:
-    $ref: .\Threads.yaml

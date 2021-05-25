@@ -1,0 +1,33 @@
+post:
+  tags:
+    - posts
+  summary: Write information to a provided thread.
+  description: Write information to a provided thread.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          testApiPost:
+            summary: post on the HF API test thread
+            value:
+              asks:
+                posts:
+                  _tid: 6083735
+                  _message: Using the [url=https://github.com/xadamxk/hf-api-specification]hf-api-specification[/url] project to post on the HF API test thread.
+        schema:
+          $ref: ..\components\schemas\posts\PostsWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Write Post(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\posts\PostsWriteResponse.yaml'
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,0 +1,28 @@
+post:
+  tags:
+    - sigmarket
+  summary: Returns information for provided signature market(s) type market.
+  description: Returns information for provided signature market(s) type market.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+        # TODO: Example
+        schema:
+          $ref: ..\components\schemas\sigmarket\SigmarketMarketReadRequestAsk.yaml
+  responses:
+    "200":
+      description: Sigmarket(s) market info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      # TODO: Response
+      # content:
+      #   application/json:
+      #     schema:
+      #       $ref: '..\components\schemas\sigmarket\SigmarketMarketReadResponse.yaml'
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,0 +1,32 @@
+post:
+  tags:
+    - bytes
+  summary: Bump specified thread using Stanley Byte Bump feature (100 bytes).
+  description: Bump specified thread using Stanley Byte Bump feature (100 bytes).
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          byteBump:
+            summary: Bump thread.
+            value:
+              asks:
+                bytes:
+                  _bump: 6152837
+        schema:
+          $ref: ..\components\schemas\bytes\BytesBumpWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Write Byte(s) Bump info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\bytes\BytesWriteResponse.yaml'
+    "401":
+      $ref: ..\components\responses\UnauthorizedError.yaml

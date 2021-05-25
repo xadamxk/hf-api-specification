@@ -1,6 +1,6 @@
 post:
   tags:
-    - read
+    - forums
   summary: Returns information for provided forum(s).
   description: Returns information for provided forum(s).
   requestBody:
@@ -15,16 +15,23 @@ post:
                 forums:
                   _fid:
                     - 25
+                  fid: true
                   name: true
+                  description: true
+                  type: true
         schema:
-          $ref: ..\components\schemas\AskForums.yaml
+          $ref: ..\components\schemas\forums\ForumsReadRequestAsk.yaml
   responses:
-    '200':
+    "200":
       description: Forum(s) info
       headers:
         x-rate-limit-remaining:
           schema:
             type: integer
             description: Request limit per hour.
-    '401':
+      content:
+        application/json:
+          schema:
+            $ref: '..\components\schemas\forums\ForumsReadResponse.yaml'
+    "401":
       $ref: ..\components\responses\UnauthorizedError.yaml

@@ -1,0 +1,43 @@
+type: object
+description: ""
+properties:
+  threads:
+    type: array
+    description: Threads response.
+    items:
+      type: object
+      properties:
+        tid:
+          type: string
+        uid:
+          type: string
+        fid:
+          type: string
+        subject:
+          type: string
+        closed:
+          type: string
+        views:
+          type: string
+        dateline:
+          type: string
+        firstpost:
+          type: string
+        lastpost:
+          type: string
+        lastposter:
+          type: string
+        lastposteruid:
+          type: string
+        prefix:
+          type: string
+        icon:
+          type: string
+        poll:
+          type: string
+        username:
+          type: string
+        sticky:
+          type: string
+        bestpid:
+          type: string

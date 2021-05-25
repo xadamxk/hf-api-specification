@@ -1,0 +1,16 @@
+type: object
+description: "Permission: Bytes Write Permissions"
+required:
+  - _uid
+  - _amount
+properties:
+  _uid:
+    type: string
+  _amount:
+    type: string
+  _pid:
+    type: string
+    description: Post ID to link donation to.
+  _reason:
+    type: string
+    description: Byte donation reason.

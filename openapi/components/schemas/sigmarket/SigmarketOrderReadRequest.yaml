@@ -1,0 +1,52 @@
+type: object
+description: "Permission: ? Permissions"
+properties:
+  _type:
+    type: string
+    enum: ["order"]
+    description: "Order: placed signature market order."
+  _smid:
+    type:
+    description: Search directly by Order ID(s).
+    items:
+      type: number
+  _uid:
+    type: array
+    description: Search directly by User ID(s).
+    items:
+      type: number
+  _seller:
+    type: array
+    description: Search directly by Seller User ID(s). Optional _page & _perpage parameters.
+    items:
+      type: number
+  _buyer:
+    type: array
+    description: Search directly by Buyer User ID(s). Optional _page & _perpage parameters.
+    items:
+      type: number
+  _page:
+    type: array
+    items:
+      type: number
+  _perpage:
+    type: array
+    items:
+      type: number
+  smid:
+    description: "Signature market ID."
+    type: boolean
+  buyer:
+    $ref: ..\users\UsersReadRequest.yaml
+  seller:
+    $ref: ..\users\UsersReadRequest.yaml
+  startdate:
+    type: boolean
+  enddate:
+    type: boolean
+  price:
+    type: boolean
+  duration:
+    type: boolean
+  active:
+    type: boolean

@@ -1,10 +1,13 @@
 openapi: 3.0.0
 info:
   title: HF API
-  description: OpenAPI specification for the Hack Forums API.
+  description: OpenAPI specification for the Hack Forums API.<br><br>Requires access token obtained via <a href="https://hackforums.net/usercp.php?action=apideveloper">HF API Developer Portal</a> to use 'Try it out' functionality.
   version: 2.0.0
+  contract:
+    name: "xadamxk"
+    url: "https://hackforums.net/member.php?action=profile&uid=1306528"
 servers:
-  - url: 'https://hackforums.net/api/v2'
+  - url: "https://hackforums.net/api/v2"
     description: HF API Version 2
 components:
   securitySchemes:
@@ -14,13 +17,39 @@ components:
 security:
   - bearerAuth: []
 paths:
-  /read/me:
-    $ref: paths\read@me.yaml
+  /read:
+    $ref: paths\read.yaml
+  /read/bratings:
+    $ref: paths\read@bratings.yaml
+  /read/bytes:
+    $ref: paths\read@bytes.yaml
+  /read/contracts:
+    $ref: paths\read@contracts.yaml
+  /read/disputes:
+    $ref: paths\read@disputes.yaml
   /read/forums:
     $ref: paths\read@forums.yaml
-  /read/threads:
-    $ref: paths\read@threads.yaml
+  /read/me:
+    $ref: paths\read@me.yaml
   /read/posts:
     $ref: paths\read@posts.yaml
+  /read/sigmarket/market:
+    $ref: paths\read@sigmarket-market.yaml
+  /read/sigmarket/order:
+    $ref: paths\read@sigmarket-order.yaml
+  /read/threads:
+    $ref: paths\read@threads.yaml
   /read/users:
     $ref: paths\read@users.yaml
+  /write/posts:
+    $ref: paths\write@posts.yaml
+  /write/threads:
+    $ref: paths\write@threads.yaml
+  /write/bytes:
+    $ref: paths\write@bytes.yaml
+  /write/bytes/deposit:
+    $ref: paths\write@bytes-deposit.yaml
+  /write/bytes/withdraw:
+    $ref: paths\write@bytes-withdraw.yaml
+  /write/bytes/bump:
+    $ref: paths\write@bytes-bump.yaml
