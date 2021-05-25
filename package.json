@@ -17,8 +17,8 @@
   "private": true,
   "scripts": {
     "start": "openapi preview-docs",
-    "build": "openapi bundle --output dist/openapi.json openapi/openapi.yaml",
-    "build:yaml": "openapi bundle --output dist/openapi.yaml openapi/openapi.yaml",
+    "build": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
+    "build:yaml": "openapi bundle --output docs/openapi.yaml openapi/openapi.yaml",
     "test": "openapi lint",
     "start:swagger": "webpack serve",
     "build:swagger": "webpack"
