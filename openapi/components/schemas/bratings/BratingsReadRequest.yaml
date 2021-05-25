@@ -1,5 +1,5 @@
 type: object
-description: "Permission: ? Permissions"
+description: "Permission: Contracts Permissions"
 properties:
   _crid:
     type: array

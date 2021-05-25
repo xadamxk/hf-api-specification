@@ -1,5 +1,5 @@
 type: object
-description: "Permission: ? Permissions"
+description: "Permission: Bytes Permissions"
 properties:
   _id:
     type: array
