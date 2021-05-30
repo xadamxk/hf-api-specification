@@ -7,7 +7,7 @@ post:
     required: true
     content:
       application/json:
-        examples:
+        # examples:
         # TODO: Example
         schema:
           $ref: ..\components\schemas\sigmarket\SigmarketOrderReadRequestAsk.yaml
