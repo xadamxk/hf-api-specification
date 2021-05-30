@@ -5,7 +5,7 @@ info:
   version: "2.0.0"
   license:
     name: "MIT"
-    identifier: ""
+    url: "https://github.com/xadamxk/hf-api-specification/blob/master/LICENSE"
   contact:
     name: "xadamxk"
     url: "https://hackforums.net/member.php?action=profile&uid=1306528"
