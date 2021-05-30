@@ -1,6 +1,7 @@
 post:
   tags:
     - me
+  operationId: ReadMe
   summary: Returns information for the current user.
   description: Returns information for the current user.
   requestBody:

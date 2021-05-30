@@ -1,6 +1,7 @@
 post:
   tags:
     - threads
+  operationId: ReadThreads
   summary: Returns information for provided thread(s).
   description: Returns information for provided thread(s).
   requestBody:

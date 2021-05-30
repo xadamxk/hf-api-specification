@@ -1,6 +1,7 @@
 post:
   tags:
     - threads
+  operationId: WriteThreads
   summary: Create thread given provided information.
   description: Create thread given provided information.
   requestBody:

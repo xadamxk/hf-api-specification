@@ -1,6 +1,7 @@
 post:
   tags:
     - posts
+  operationId: WritePosts
   summary: Write information to a provided thread.
   description: Write information to a provided thread.
   requestBody:

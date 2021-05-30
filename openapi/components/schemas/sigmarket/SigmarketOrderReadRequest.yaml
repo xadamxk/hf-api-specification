@@ -6,7 +6,7 @@ properties:
     enum: ["order"]
     description: "Order: placed signature market order."
   _smid:
-    type:
+    type: array
     description: Search directly by Order ID(s).
     items:
       type: number

@@ -1,6 +1,7 @@
 post:
   tags:
     - contracts
+  operationId: ReadContracts
   summary: Returns information relating to contract(s).
   description: Returns information relating to contract(s).
   requestBody:

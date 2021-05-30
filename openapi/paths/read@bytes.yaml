@@ -1,6 +1,7 @@
 post:
   tags:
     - bytes
+  operationId: ReadBytes
   summary: Returns information relating to byte(s).
   description: Returns information relating to byte(s).
   requestBody:

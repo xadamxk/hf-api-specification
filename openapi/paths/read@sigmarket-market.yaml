@@ -1,13 +1,14 @@
 post:
   tags:
     - sigmarket
+  operationId: ReadSigmarketMarket
   summary: Returns information for provided signature market(s) type market.
   description: Returns information for provided signature market(s) type market.
   requestBody:
     required: true
     content:
       application/json:
-        examples:
+        # examples:
         # TODO: Example
         schema:
           $ref: ..\components\schemas\sigmarket\SigmarketMarketReadRequestAsk.yaml

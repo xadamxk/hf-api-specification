@@ -1,6 +1,7 @@
 post:
   tags:
     - posts
+  operationId: ReadPosts
   summary: Returns information for provided post(s).
   description: Returns information for provided post(s).
   requestBody:

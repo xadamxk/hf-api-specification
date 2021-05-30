@@ -1,6 +1,7 @@
 post:
   tags:
     - disputes
+  operationId: ReadDisputes
   summary: Returns information relating to dispute(s).
   description: Returns information relating to dispute(s).
   requestBody:

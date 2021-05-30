@@ -1,6 +1,7 @@
 post:
   tags:
     - forums
+  operationId: ReadForums
   summary: Returns information for provided forum(s).
   description: Returns information for provided forum(s).
   requestBody:

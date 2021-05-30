@@ -1,6 +1,7 @@
 post:
   tags:
     - bytes
+  operationId: WriteBytesBump
   summary: Bump specified thread using Stanley Byte Bump feature (100 bytes).
   description: Bump specified thread using Stanley Byte Bump feature (100 bytes).
   requestBody:
