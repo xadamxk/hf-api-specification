@@ -16,11 +16,11 @@
   },
   "private": true,
   "scripts": {
-    "build": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
+    "build": "webpack",
     "build:redocly": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
     "build:swagger": "webpack",
     "build:yaml": "openapi bundle --output docs/openapi.yaml openapi/openapi.yaml",
-    "start": "openapi preview-docs",
+    "start": "webpack serve",
     "start:redocly": "openapi preview-docs",
     "start:swagger": "webpack serve",
     "test": "openapi lint"
