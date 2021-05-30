@@ -3,6 +3,5 @@ import 'swagger-ui/dist/swagger-ui.css';
 
 SwaggerUI({
   spec: require('./openapi.json'),
-  dom_id: '#swagger',
-  supportedSubmitMethods: ["get", "post"]
+  dom_id: '#swagger'
 });
