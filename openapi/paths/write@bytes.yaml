@@ -1,6 +1,7 @@
 post:
   tags:
     - bytes
+  operationId: WriteBytes
   summary: Send bytes to provided user.
   description: Send bytes to provided user.
   requestBody:

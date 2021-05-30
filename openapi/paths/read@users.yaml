@@ -1,6 +1,7 @@
 post:
   tags:
     - users
+  operationId: ReadUsers
   summary: Returns information for provided user(s).
   description: Returns information for provided user(s).
   requestBody:

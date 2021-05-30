@@ -1,6 +1,7 @@
 post:
   tags:
     - sigmarket
+  operationId: ReadSigmarketOrder
   summary: Returns information for provided signature market(s) type order.
   description: Returns information for provided signature market(s) type order.
   requestBody:

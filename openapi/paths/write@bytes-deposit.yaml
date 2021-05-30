@@ -1,6 +1,7 @@
 post:
   tags:
     - bytes
+  operationId: WriteBytesDeposit
   summary: Deposit specified bytes to API Client Vault (Minimum 100).
   description: Deposit specified bytes to API Client Vault (Minimum 100).
   requestBody:
