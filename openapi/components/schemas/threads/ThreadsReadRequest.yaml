@@ -6,6 +6,11 @@ properties:
     description: Search directly by Thread ID(s).
     items:
       type: number
+  _fid:
+    type: array
+    description: "Search posts by Forum ID(s)."
+    items:
+      type: number
   _uid:
     type: array
     description: Search by User ID(s).
