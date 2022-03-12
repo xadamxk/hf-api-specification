@@ -13,7 +13,7 @@ properties:
           type: string
         usergroup:
           type: string
-        displayGroup:
+        displaygroup:
           type: string
         additionalgroups:
           type: string
