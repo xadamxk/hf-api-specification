@@ -25,7 +25,7 @@ post:
                   uid: true
                   username: true
                   usergroup: true
-                  displayGroup: true
+                  displaygroup: true
                   additionalgroups: true
                   postnum: true
                   awards: true
