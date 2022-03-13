@@ -4,7 +4,11 @@
     "title": "HF API",
     "description": "OpenAPI specification for the Hack Forums API.<br><br>Requires access token obtained via <a href=\"https://hackforums.net/usercp.php?action=apideveloper\">HF API Developer Portal</a> to use 'Try it out' functionality.",
     "version": "2.0.0",
-    "contract": {
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/xadamxk/hf-api-specification/blob/master/LICENSE"
+    },
+    "contact": {
       "name": "xadamxk",
       "url": "https://hackforums.net/member.php?action=profile&uid=1306528"
     }
@@ -851,7 +855,7 @@
             "description": "Order: placed signature market order."
           },
           "_smid": {
-            "type": null,
+            "type": "array",
             "description": "Search directly by Order ID(s).",
             "items": {
               "type": "number"
@@ -933,6 +937,13 @@
           "_tid": {
             "type": "array",
             "description": "Search directly by Thread ID(s).",
+            "items": {
+              "type": "number"
+            }
+          },
+          "_fid": {
+            "type": "array",
+            "description": "Search posts by Forum ID(s).",
             "items": {
               "type": "number"
             }
@@ -1668,7 +1679,7 @@
   "paths": {
     "/read": {
       "post": {
-        "tags": null,
+        "operationId": "AllRead",
         "summary": "Returns all available, provided read fields.",
         "description": "Returns all available, provided read fields.",
         "requestBody": {
@@ -1757,6 +1768,7 @@
         "tags": [
           "bratings"
         ],
+        "operationId": "ReadBratings",
         "summary": "Returns information relating to brating(s).",
         "description": "Returns information relating to brating(s).",
         "requestBody": {
@@ -1820,6 +1832,7 @@
         "tags": [
           "bytes"
         ],
+        "operationId": "ReadBytes",
         "summary": "Returns information relating to byte(s).",
         "description": "Returns information relating to byte(s).",
         "requestBody": {
@@ -1880,6 +1893,7 @@
         "tags": [
           "contracts"
         ],
+        "operationId": "ReadContracts",
         "summary": "Returns information relating to contract(s).",
         "description": "Returns information relating to contract(s).",
         "requestBody": {
@@ -1943,6 +1957,7 @@
         "tags": [
           "disputes"
         ],
+        "operationId": "ReadDisputes",
         "summary": "Returns information relating to dispute(s).",
         "description": "Returns information relating to dispute(s).",
         "requestBody": {
@@ -2008,6 +2023,7 @@
         "tags": [
           "forums"
         ],
+        "operationId": "ReadForums",
         "summary": "Returns information for provided forum(s).",
         "description": "Returns information for provided forum(s).",
         "requestBody": {
@@ -2068,6 +2084,7 @@
         "tags": [
           "me"
         ],
+        "operationId": "ReadMe",
         "summary": "Returns information for the current user.",
         "description": "Returns information for the current user.",
         "requestBody": {
@@ -2156,6 +2173,7 @@
         "tags": [
           "posts"
         ],
+        "operationId": "ReadPosts",
         "summary": "Returns information for provided post(s).",
         "description": "Returns information for provided post(s).",
         "requestBody": {
@@ -2222,13 +2240,13 @@
         "tags": [
           "sigmarket"
         ],
+        "operationId": "ReadSigmarketMarket",
         "summary": "Returns information for provided signature market(s) type market.",
         "description": "Returns information for provided signature market(s) type market.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "examples": null,
               "schema": {
                 "$ref": "#/components/schemas/SigmarketMarketReadRequestAsk"
               }
@@ -2258,13 +2276,13 @@
         "tags": [
           "sigmarket"
         ],
+        "operationId": "ReadSigmarketOrder",
         "summary": "Returns information for provided signature market(s) type order.",
         "description": "Returns information for provided signature market(s) type order.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
-              "examples": null,
               "schema": {
                 "$ref": "#/components/schemas/SigmarketOrderReadRequestAsk"
               }
@@ -2294,6 +2312,7 @@
         "tags": [
           "threads"
         ],
+        "operationId": "ReadThreads",
         "summary": "Returns information for provided thread(s).",
         "description": "Returns information for provided thread(s).",
         "requestBody": {
@@ -2301,6 +2320,18 @@
           "content": {
             "application/json": {
               "examples": {
+                "loungeThreads": {
+                  "summary": "return recent posts in Lounge \"Search posts by Forum ID(s).\"",
+                  "value": {
+                    "asks": {
+                      "threads": {
+                        "_fid": [
+                          25
+                        ]
+                      }
+                    }
+                  }
+                },
                 "lounge": {
                   "summary": "return HF API Thread information",
                   "value": {
@@ -2368,6 +2399,7 @@
         "tags": [
           "users"
         ],
+        "operationId": "ReadUsers",
         "summary": "Returns information for provided user(s).",
         "description": "Returns information for provided user(s).",
         "requestBody": {
@@ -2434,6 +2466,7 @@
         "tags": [
           "posts"
         ],
+        "operationId": "WritePosts",
         "summary": "Write information to a provided thread.",
         "description": "Write information to a provided thread.",
         "requestBody": {
@@ -2489,6 +2522,7 @@
         "tags": [
           "threads"
         ],
+        "operationId": "WriteThreads",
         "summary": "Create thread given provided information.",
         "description": "Create thread given provided information.",
         "requestBody": {
@@ -2545,6 +2579,7 @@
         "tags": [
           "bytes"
         ],
+        "operationId": "WriteBytes",
         "summary": "Send bytes to provided user.",
         "description": "Send bytes to provided user.",
         "requestBody": {
@@ -2601,6 +2636,7 @@
         "tags": [
           "bytes"
         ],
+        "operationId": "WriteBytesDeposit",
         "summary": "Deposit specified bytes to API Client Vault (Minimum 100).",
         "description": "Deposit specified bytes to API Client Vault (Minimum 100).",
         "requestBody": {
@@ -2655,6 +2691,7 @@
         "tags": [
           "bytes"
         ],
+        "operationId": "WriteBytesWithdraw",
         "summary": "Withdraw specified bytes to API Client Vault. (Minimum 100)",
         "description": "Withdraw specified bytes to API Client Vault. (Minimum 100)",
         "requestBody": {
@@ -2709,6 +2746,7 @@
         "tags": [
           "bytes"
         ],
+        "operationId": "WriteBytesBump",
         "summary": "Bump specified thread using Stanley Byte Bump feature (100 bytes).",
         "description": "Bump specified thread using Stanley Byte Bump feature (100 bytes).",
         "requestBody": {
