@@ -1,28 +1,36 @@
 {
   "name": "hf-api-specification",
   "version": "1.0.0",
-  "dependencies": {
-    "@redocly/openapi-cli": "^1.0.0-beta.47",
-    "css-loader": "^5.2.4",
-    "html-webpack-plugin": "^5.3.1",
-    "json-loader": "^0.5.7",
-    "node-fetch": "^2.6.1",
-    "style-loader": "^2.0.0",
-    "swagger-ui": "^3.48.0",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2",
-    "yaml-loader": "^0.6.0"
-  },
   "private": true,
   "scripts": {
     "build": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
     "build:redocly": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
     "build:swagger": "webpack",
     "build:yaml": "openapi bundle --output docs/openapi.yaml openapi/openapi.yaml",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "start": "webpack serve",
     "start:redocly": "openapi preview-docs",
     "start:swagger": "webpack serve",
     "test": "openapi lint"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "test",
+    "build"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.47",
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
+    "json-loader": "^0.5.7",
+    "node-fetch": "^2.6.1",
+    "pre-commit": "^1.2.2",
+    "style-loader": "^2.0.0",
+    "swagger-ui": "^3.48.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "yaml-loader": "^0.6.0"
   }
 }
