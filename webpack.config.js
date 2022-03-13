@@ -24,6 +24,8 @@ class OpenApiPlugin {
       build();
     }), 200);
 
+    build();
+
     compiler.hooks.beforeCompile.tapAsync('MyPlugin', (params, callback) => {
       if (!compiler.watchMode) {
         watcher.close();
