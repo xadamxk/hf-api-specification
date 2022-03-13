@@ -11,7 +11,7 @@ post:
         # examples:
         # TODO: Example
         schema:
-          $ref: ..\components\schemas\sigmarket\SigmarketOrderReadRequestAsk.yaml
+          $ref: ../components/schemas/sigmarket/SigmarketOrderReadRequestAsk.yaml
   responses:
     "200":
       description: Sigmarket(s) order info
@@ -24,6 +24,6 @@ post:
       # content:
       #   application/json:
       #     schema:
-      #       $ref: '..\components\schemas\sigmarket\SigmarketOrderReadResponse.yaml'
+      #       $ref: '../components/schemas/sigmarket/SigmarketOrderReadResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

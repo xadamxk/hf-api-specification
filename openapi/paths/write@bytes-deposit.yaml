@@ -16,7 +16,7 @@ post:
                 bytes:
                   _deposit: 100
         schema:
-          $ref: ..\components\schemas\bytes\BytesDepositWriteRequestAsk.yaml
+          $ref: ../components/schemas/bytes/BytesDepositWriteRequestAsk.yaml
   responses:
     "200":
       description: Write Byte(s) info
@@ -28,6 +28,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\bytes\BytesWriteResponse.yaml'
+            $ref: '../components/schemas/bytes/BytesWriteResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\ThreadsWriteRequest.yaml
+    $ref: ./ThreadsWriteRequest.yaml

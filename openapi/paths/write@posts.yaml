@@ -17,7 +17,7 @@ post:
                   _tid: 6083735
                   _message: Using the [url=https://github.com/xadamxk/hf-api-specification]hf-api-specification[/url] project to post on the HF API test thread.
         schema:
-          $ref: ..\components\schemas\posts\PostsWriteRequestAsk.yaml
+          $ref: ../components/schemas/posts/PostsWriteRequestAsk.yaml
   responses:
     "200":
       description: Write Post(s) info
@@ -29,6 +29,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\posts\PostsWriteResponse.yaml'
+            $ref: '../components/schemas/posts/PostsWriteResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

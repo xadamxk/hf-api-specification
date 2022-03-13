@@ -42,7 +42,7 @@ post:
                   sticky: true
                   bestpid: true
         schema:
-          $ref: ..\components\schemas\threads\ThreadsReadRequestAsk.yaml
+          $ref: ../components/schemas/threads/ThreadsReadRequestAsk.yaml
   responses:
     "200":
       description: Thread(s) info
@@ -54,6 +54,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\threads\ThreadsReadResponse.yaml'
+            $ref: '../components/schemas/threads/ThreadsReadResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

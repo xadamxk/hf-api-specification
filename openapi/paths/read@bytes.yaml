@@ -22,7 +22,7 @@ post:
                   type: true
                   reason: true
         schema:
-          $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
+          $ref: ../components/schemas/bytes/BytesReadRequestAsk.yaml
   responses:
     "200":
       description: Bytes(s) info
@@ -34,6 +34,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\bytes\BytesReadResponse.yaml'
+            $ref: '../components/schemas/bytes/BytesReadResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

@@ -23,7 +23,7 @@ post:
                   amount: true
                   message: true
         schema:
-          $ref: ..\components\schemas\bratings\BratingsReadRequestAsk.yaml
+          $ref: ../components/schemas/bratings/BratingsReadRequestAsk.yaml
   responses:
     "200":
       description: Brating(s) info
@@ -35,6 +35,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\bratings\BratingsWriteResponse.yaml'
+            $ref: '../components/schemas/bratings/BratingsWriteResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

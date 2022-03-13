@@ -21,38 +21,38 @@ security:
   - bearerAuth: []
 paths:
   /read:
-    $ref: paths\read.yaml
+    $ref: paths/read.yaml
   /read/bratings:
-    $ref: paths\read@bratings.yaml
+    $ref: paths/read@bratings.yaml
   /read/bytes:
-    $ref: paths\read@bytes.yaml
+    $ref: paths/read@bytes.yaml
   /read/contracts:
-    $ref: paths\read@contracts.yaml
+    $ref: paths/read@contracts.yaml
   /read/disputes:
-    $ref: paths\read@disputes.yaml
+    $ref: paths/read@disputes.yaml
   /read/forums:
-    $ref: paths\read@forums.yaml
+    $ref: paths/read@forums.yaml
   /read/me:
-    $ref: paths\read@me.yaml
+    $ref: paths/read@me.yaml
   /read/posts:
-    $ref: paths\read@posts.yaml
+    $ref: paths/read@posts.yaml
   /read/sigmarket/market:
-    $ref: paths\read@sigmarket-market.yaml
+    $ref: paths/read@sigmarket-market.yaml
   /read/sigmarket/order:
-    $ref: paths\read@sigmarket-order.yaml
+    $ref: paths/read@sigmarket-order.yaml
   /read/threads:
-    $ref: paths\read@threads.yaml
+    $ref: paths/read@threads.yaml
   /read/users:
-    $ref: paths\read@users.yaml
+    $ref: paths/read@users.yaml
   /write/posts:
-    $ref: paths\write@posts.yaml
+    $ref: paths/write@posts.yaml
   /write/threads:
-    $ref: paths\write@threads.yaml
+    $ref: paths/write@threads.yaml
   /write/bytes:
-    $ref: paths\write@bytes.yaml
+    $ref: paths/write@bytes.yaml
   /write/bytes/deposit:
-    $ref: paths\write@bytes-deposit.yaml
+    $ref: paths/write@bytes-deposit.yaml
   /write/bytes/withdraw:
-    $ref: paths\write@bytes-withdraw.yaml
+    $ref: paths/write@bytes-withdraw.yaml
   /write/bytes/bump:
-    $ref: paths\write@bytes-bump.yaml
+    $ref: paths/write@bytes-bump.yaml

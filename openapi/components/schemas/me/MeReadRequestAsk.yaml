@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\MeReadRequest.yaml
+    $ref: ./MeReadRequest.yaml

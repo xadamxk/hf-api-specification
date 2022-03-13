@@ -27,7 +27,7 @@ post:
                   edittime: true
                   editreason: true
         schema:
-          $ref: ..\components\schemas\posts\PostsReadRequestAsk.yaml
+          $ref: ../components/schemas/posts/PostsReadRequestAsk.yaml
   responses:
     "200":
       description: Post(s) info
@@ -39,6 +39,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\posts\PostsReadResponse.yaml'
+            $ref: '../components/schemas/posts/PostsReadResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml
