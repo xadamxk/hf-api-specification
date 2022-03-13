@@ -30,7 +30,6 @@ class OpenApiPlugin {
       if (!compiler.watchMode) {
         watcher.close();
       }
-
       callback();
     });
   }

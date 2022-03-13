@@ -9,6 +9,13 @@ post:
     content:
       application/json:
         examples:
+          loungeThreads:
+            summary: return recent posts in Lounge "Search posts by Forum ID(s)."
+            value:
+              asks:
+                threads:
+                  _fid:
+                    - 25
           lounge:
             summary: return HF API Thread information
             value:
