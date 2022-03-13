@@ -16,7 +16,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
     "build:redocly": "openapi bundle --output docs/openapi.json openapi/openapi.yaml",
     "build:swagger": "webpack",
     "build:yaml": "openapi bundle --output docs/openapi.yaml openapi/openapi.yaml",
