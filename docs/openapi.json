@@ -1252,7 +1252,7 @@
                 "usergroup": {
                   "type": "string"
                 },
-                "displayGroup": {
+                "displaygroup": {
                   "type": "string"
                 },
                 "additionalgroups": {
@@ -2112,7 +2112,7 @@
                         "uid": true,
                         "username": true,
                         "usergroup": true,
-                        "displayGroup": true,
+                        "displaygroup": true,
                         "additionalgroups": true,
                         "postnum": true,
                         "awards": true,
