@@ -19,17 +19,17 @@ post:
                   contractid: true
         schema:
           anyOf:
-            - $ref: ..\components\schemas\bratings\BratingsReadRequestAsk.yaml
-            - $ref: ..\components\schemas\bytes\BytesReadRequestAsk.yaml
-            - $ref: ..\components\schemas\contracts\ContractsReadRequestAsk.yaml
-            - $ref: ..\components\schemas\disputes\DisputesReadRequestAsk.yaml
-            - $ref: ..\components\schemas\forums\ForumsReadRequestAsk.yaml
-            - $ref: ..\components\schemas\me\MeReadRequestAsk.yaml
-            - $ref: ..\components\schemas\posts\PostsReadRequestAsk.yaml
-            - $ref: ..\components\schemas\sigmarket\SigmarketMarketReadRequestAsk.yaml
-            - $ref: ..\components\schemas\sigmarket\SigmarketOrderReadRequestAsk.yaml
-            - $ref: ..\components\schemas\threads\ThreadsReadRequestAsk.yaml
-            - $ref: ..\components\schemas\users\UsersReadRequestAsk.yaml
+            - $ref: ../components/schemas/bratings/BratingsReadRequestAsk.yaml
+            - $ref: ../components/schemas/bytes/BytesReadRequestAsk.yaml
+            - $ref: ../components/schemas/contracts/ContractsReadRequestAsk.yaml
+            - $ref: ../components/schemas/disputes/DisputesReadRequestAsk.yaml
+            - $ref: ../components/schemas/forums/ForumsReadRequestAsk.yaml
+            - $ref: ../components/schemas/me/MeReadRequestAsk.yaml
+            - $ref: ../components/schemas/posts/PostsReadRequestAsk.yaml
+            - $ref: ../components/schemas/sigmarket/SigmarketMarketReadRequestAsk.yaml
+            - $ref: ../components/schemas/sigmarket/SigmarketOrderReadRequestAsk.yaml
+            - $ref: ../components/schemas/threads/ThreadsReadRequestAsk.yaml
+            - $ref: ../components/schemas/users/UsersReadRequestAsk.yaml
   responses:
     "200":
       description: All available read fields.
@@ -39,4 +39,4 @@ post:
             type: integer
             description: Request limit per hour.
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

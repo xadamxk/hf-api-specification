@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\SigmarketOrderReadRequest.yaml
+    $ref: ./SigmarketOrderReadRequest.yaml

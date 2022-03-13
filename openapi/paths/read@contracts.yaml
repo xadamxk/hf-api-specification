@@ -24,7 +24,7 @@ post:
                   timeout: true
                   status: true
         schema:
-          $ref: ..\components\schemas\contracts\ContractsReadRequestAsk.yaml
+          $ref: ../components/schemas/contracts/ContractsReadRequestAsk.yaml
   responses:
     "200":
       description: Contract(s) info
@@ -36,6 +36,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\contracts\ContractsReadResponse.yaml'
+            $ref: '../components/schemas/contracts/ContractsReadResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

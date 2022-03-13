@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\UsersReadRequest.yaml
+    $ref: ./UsersReadRequest.yaml

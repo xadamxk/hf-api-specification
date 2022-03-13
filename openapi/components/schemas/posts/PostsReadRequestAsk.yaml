@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\PostsReadRequest.yaml
+    $ref: ./PostsReadRequest.yaml

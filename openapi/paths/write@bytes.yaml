@@ -18,7 +18,7 @@ post:
                   _amount: 15
                   _reason: Using the hf-api-specification project (https://github.com/xadamxk/hf-api-specification) to send xadamxk bytes.
         schema:
-          $ref: ..\components\schemas\bytes\BytesWriteRequestAsk.yaml
+          $ref: ../components/schemas/bytes/BytesWriteRequestAsk.yaml
   responses:
     "200":
       description: Write Byte(s) info
@@ -30,6 +30,6 @@ post:
       content:
         application/json:
           schema:
-            $ref: '..\components\schemas\bytes\BytesWriteResponse.yaml'
+            $ref: '../components/schemas/bytes/BytesWriteResponse.yaml'
     "401":
-      $ref: ..\components\responses\UnauthorizedError.yaml
+      $ref: ../components/responses/UnauthorizedError.yaml

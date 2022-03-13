@@ -2,4 +2,4 @@ type: object
 description: ""
 properties:
   asks:
-    $ref: .\ThreadsReadRequest.yaml
+    $ref: ./ThreadsReadRequest.yaml
