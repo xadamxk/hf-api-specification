@@ -16,7 +16,8 @@
   "pre-commit": [
     "precommit-msg",
     "test",
-    "build"
+    "build",
+    "build:swagger"
   ],
   "dependencies": {},
   "devDependencies": {
