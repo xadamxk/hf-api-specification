@@ -1,0 +1,27 @@
+type: object
+description: ""
+properties:
+  contracts:
+    type: array
+    description: Contracts response.
+    items:
+      type: object
+      properties:
+        cid:
+          type: string
+          description: Contract id.
+        status:
+          type: string
+          description: Contract status.
+        istatus:
+          type: string
+          description: Contract status.
+        ostatus:
+          type: string
+          description: Contract status.
+        inituid:
+          type: string
+          description: Initial user id.
+        otheruid:
+          type: string
+          description: Other user id.

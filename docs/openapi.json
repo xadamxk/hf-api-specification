@@ -1832,6 +1832,74 @@
             }
           }
         }
+      },
+      "ContractsUndoWriteRequest": {
+        "type": "object",
+        "description": "Permission: Contracts Write Permissions",
+        "required": [
+          "_action",
+          "_cid"
+        ],
+        "properties": {
+          "_action": {
+            "type": "string",
+            "enum": [
+              "undo"
+            ]
+          },
+          "_cid": {
+            "type": "string",
+            "description": "Contract id."
+          }
+        }
+      },
+      "ContractsUndoWriteRequestAsk": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "asks": {
+            "$ref": "#/components/schemas/ContractsUndoWriteRequest"
+          }
+        }
+      },
+      "ContractsUndoWriteResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "contracts": {
+            "type": "array",
+            "description": "Contracts response.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cid": {
+                  "type": "string",
+                  "description": "Contract id."
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "istatus": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "ostatus": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "inituid": {
+                  "type": "string",
+                  "description": "Initial user id."
+                },
+                "otheruid": {
+                  "type": "string",
+                  "description": "Other user id."
+                }
+              }
+            }
+          }
+        }
       }
     },
     "responses": {
@@ -3018,6 +3086,62 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ContractsWriteResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    },
+    "/write/contracts/undo": {
+      "post": {
+        "tags": [
+          "contracts"
+        ],
+        "operationId": "WriteContractsUndo",
+        "summary": "Undo a newly created contract.",
+        "description": "Undo a newly created contract.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "examples": {
+                "contract": {
+                  "summary": "Undo a recently created contract.",
+                  "value": {
+                    "asks": {
+                      "contracts": {
+                        "_action": "undo",
+                        "_cid": 0
+                      }
+                    }
+                  }
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/ContractsUndoWriteRequestAsk"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Contract(s) info",
+            "headers": {
+              "x-rate-limit-remaining": {
+                "schema": {
+                  "type": "integer",
+                  "description": "Request limit per hour."
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContractsUndoWriteResponse"
                 }
               }
             }

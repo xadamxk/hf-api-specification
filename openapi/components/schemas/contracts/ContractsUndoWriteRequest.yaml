@@ -1,0 +1,12 @@
+type: object
+description: "Permission: Contracts Write Permissions"
+required:
+  - _action
+  - _cid
+properties:
+  _action:
+    type: string
+    enum: ["undo"]
+  _cid:
+    type: string
+    description: 'Contract id.'

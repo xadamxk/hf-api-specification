@@ -1,0 +1,34 @@
+post:
+  tags:
+    - contracts
+  operationId: WriteContractsUndo
+  summary: Undo a newly created contract.
+  description: Undo a newly created contract.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          contract:
+            summary: Undo a recently created contract.
+            value:
+              asks:
+                contracts:
+                  _action: 'undo'
+                  _cid: 0
+        schema:
+          $ref: ../components/schemas/contracts/ContractsUndoWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Contract(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/contracts/ContractsUndoWriteResponse.yaml'
+    "401":
+      $ref: ../components/responses/UnauthorizedError.yaml

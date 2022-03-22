@@ -63,3 +63,5 @@ paths:
     $ref: paths/write@bytes-bump.yaml
   /write/contracts:
     $ref: paths/write@contracts.yaml
+  /write/contracts/undo:
+    $ref: paths/write@contracts-undo.yaml
