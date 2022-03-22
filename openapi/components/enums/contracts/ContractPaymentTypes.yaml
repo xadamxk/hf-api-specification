@@ -1,0 +1,30 @@
+type: string
+format: enum
+enum:
+# Crypto
+    - "btc" # Bitcoin (BTC)
+    - "eth" # Ethereum (ETH)
+    - "bch" # Bitcoin Cash (BCH)
+    - "exrd" # Radix (EXRD)
+    - "usdt" # Tether (USDT)
+    - "ltc" # Litecoin (LTC)
+    - "xmr" # Monero (XMR)
+    - "xlm" # Stellar (XLM)
+    - "trx" # Tron (TRX)
+    - "xrp" # Ripple (XRP)
+    - "doge" # Dogecoin (DOGE)
+    - "dash" # DASH (DASH)
+    # Cash Services
+    - "wu" # Western Union
+    - "paypal" # Paypal
+    - "cashapp" # Cashapp
+    - "zelle" # Zelle
+    - "venmo" # Venmo
+    - "skrill" # Skrill
+    - "pm" # Perfect Money
+    - "google" # Google Pay
+    - "apple" # Apple Pay
+    # Other
+    - "agc" # Amazon GC
+    - "bytes" # Bytes
+    - "other" # Other

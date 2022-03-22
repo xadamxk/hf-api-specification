@@ -1,0 +1,41 @@
+post:
+  tags:
+    - contracts
+  operationId: WriteContracts
+  summary: Create a new contract.
+  description: Create a new contract.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        examples:
+          contract:
+            summary: create a contract with Stanley
+            value:
+              asks:
+                contracts:
+                  _action: 'new'
+                  _position: 'buying'
+                  _terms: 'This is a test contract using the hf-api-specification project to generate a contract on the HF API.'
+                  _tid: "6035467"
+                  _timeout: 1
+                  _uid: 1337
+                  _youramount: 1
+                  _yourcurrency: 'bytes'
+                  _theirproduct: 'Nothing.'
+        schema:
+          $ref: ../components/schemas/contracts/ContractsWriteRequestAsk.yaml
+  responses:
+    "200":
+      description: Contract(s) info
+      headers:
+        x-rate-limit-remaining:
+          schema:
+            type: integer
+            description: Request limit per hour.
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/contracts/ContractsWriteResponse.yaml'
+    "401":
+      $ref: ../components/responses/UnauthorizedError.yaml

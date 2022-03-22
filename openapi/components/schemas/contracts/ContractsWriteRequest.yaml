@@ -1,0 +1,54 @@
+type: object
+description: "Permission: Contracts Write Permissions"
+required:
+  - _action
+  - _position
+  - _terms
+  - _tid
+  - _timeout
+  - _uid
+  - _youramount
+  - _yourcurrency
+properties:
+  _action:
+    type: string
+    enum: ["new"]
+  _uid:
+    type: string
+    description: "Other user. Enter the profile link or UID of the user you would like to start a contract with."
+  _terms:
+    type: string
+    description: "Contract terms. Provide any additional details to be recorded in the contract. MyCode formatting NOT supported."
+  _yourcurrency:
+    $ref: '../../enums/contracts/ContractPaymentTypes.yaml'
+    description: "Your currency."
+  _youramount:
+    type: number
+    description: "Your amount. The amount of the currency in this deal."
+  _timeout:
+    type: number
+    description: "Contract timeout. Enter the number of days this contract must be completed in before it is marked as Incomplete."
+  _position:
+    $ref: '../../enums/contracts/ContractPositions.yaml'
+    description: "Your position. Choose the option that best describes your position in the contract."
+  _theirproduct:
+    type: string
+    description: "Optional: Other user product." 
+  _theircurrency:
+    $ref: '../../enums/contracts/ContractPaymentTypes.yaml'
+    description: "Optional: Other user currency." 
+  _theiramount:
+    type: number
+    description: "Optional: Other user amount."
+  _tid:
+    type: string
+    description: "Optional: Thread link. Enter the thread link or TID of the thread you are starting a contract for."
+  _muid:
+    type: string
+    description: "Optional. Middleman/Escrow. Enter the profile link or UID of the user that will act as middleman/escrow for this contract. They must approve the contract as well."
+  _public:
+    type: boolean
+    description: "Optional. Is public contract? If set, contract will be able to be viewed by any user. Private by default."
+  _address:
+    type: string
+    description: "Optional. Payment address. Enter your payment address for this contract."

@@ -27,6 +27,12 @@
       }
     },
     "schemas": {
+      "ContractPositions": {
+        "$ref": "#/components/schemas/ContractPositions-2"
+      },
+      "ContractPaymentTypes": {
+        "$ref": "#/components/schemas/ContractPaymentTypes-2"
+      },
       "BratingsReadRequest": {
         "type": "object",
         "description": "Permission: Contracts Permissions",
@@ -1663,6 +1669,169 @@
             "$ref": "#/components/schemas/BytesBumpWriteRequest"
           }
         }
+      },
+      "ContractPaymentTypes-2": {
+        "type": "string",
+        "format": "enum",
+        "enum": [
+          "btc",
+          "eth",
+          "bch",
+          "exrd",
+          "usdt",
+          "ltc",
+          "xmr",
+          "xlm",
+          "trx",
+          "xrp",
+          "doge",
+          "dash",
+          "wu",
+          "paypal",
+          "cashapp",
+          "zelle",
+          "venmo",
+          "skrill",
+          "pm",
+          "google",
+          "apple",
+          "agc",
+          "bytes",
+          "other"
+        ]
+      },
+      "ContractPositions-2": {
+        "type": "string",
+        "enum": [
+          "none",
+          "buying",
+          "selling",
+          "exchanging",
+          "trading",
+          "vouchcopy"
+        ]
+      },
+      "ContractsWriteRequest": {
+        "type": "object",
+        "description": "Permission: Contracts Write Permissions",
+        "required": [
+          "_action",
+          "_position",
+          "_terms",
+          "_tid",
+          "_timeout",
+          "_uid",
+          "_youramount",
+          "_yourcurrency"
+        ],
+        "properties": {
+          "_action": {
+            "type": "string",
+            "enum": [
+              "new"
+            ]
+          },
+          "_uid": {
+            "type": "string",
+            "description": "Other user. Enter the profile link or UID of the user you would like to start a contract with."
+          },
+          "_terms": {
+            "type": "string",
+            "description": "Contract terms. Provide any additional details to be recorded in the contract. MyCode formatting NOT supported."
+          },
+          "_yourcurrency": {
+            "$ref": "#/components/schemas/ContractPaymentTypes-2",
+            "description": "Your currency."
+          },
+          "_youramount": {
+            "type": "number",
+            "description": "Your amount. The amount of the currency in this deal."
+          },
+          "_timeout": {
+            "type": "number",
+            "description": "Contract timeout. Enter the number of days this contract must be completed in before it is marked as Incomplete."
+          },
+          "_position": {
+            "$ref": "#/components/schemas/ContractPositions-2",
+            "description": "Your position. Choose the option that best describes your position in the contract."
+          },
+          "_theirproduct": {
+            "type": "string",
+            "description": "Optional: Other user product."
+          },
+          "_theircurrency": {
+            "$ref": "#/components/schemas/ContractPaymentTypes-2",
+            "description": "Optional: Other user currency."
+          },
+          "_theiramount": {
+            "type": "number",
+            "description": "Optional: Other user amount."
+          },
+          "_tid": {
+            "type": "string",
+            "description": "Optional: Thread link. Enter the thread link or TID of the thread you are starting a contract for."
+          },
+          "_muid": {
+            "type": "string",
+            "description": "Optional. Middleman/Escrow. Enter the profile link or UID of the user that will act as middleman/escrow for this contract. They must approve the contract as well."
+          },
+          "_public": {
+            "type": "boolean",
+            "description": "Optional. Is public contract? If set, contract will be able to be viewed by any user. Private by default."
+          },
+          "_address": {
+            "type": "string",
+            "description": "Optional. Payment address. Enter your payment address for this contract."
+          }
+        }
+      },
+      "ContractsWriteRequestAsk": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "asks": {
+            "$ref": "#/components/schemas/ContractsWriteRequest"
+          }
+        }
+      },
+      "ContractsWriteResponse": {
+        "type": "object",
+        "description": "",
+        "properties": {
+          "contracts": {
+            "type": "array",
+            "description": "Contracts response.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cid": {
+                  "type": "string",
+                  "description": "Contract id."
+                },
+                "status": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "istatus": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "ostatus": {
+                  "type": "string",
+                  "description": "Contract status."
+                },
+                "inituid": {
+                  "type": "string",
+                  "description": "Initial user id."
+                },
+                "otheruid": {
+                  "type": "string",
+                  "description": "Other user id."
+                }
+              }
+            }
+          }
+        }
       }
     },
     "responses": {
@@ -2786,6 +2955,69 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BytesWriteResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
+      }
+    },
+    "/write/contracts": {
+      "post": {
+        "tags": [
+          "contracts"
+        ],
+        "operationId": "WriteContracts",
+        "summary": "Create a new contract.",
+        "description": "Create a new contract.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "examples": {
+                "contract": {
+                  "summary": "create a contract with Stanley",
+                  "value": {
+                    "asks": {
+                      "contracts": {
+                        "_action": "new",
+                        "_position": "buying",
+                        "_terms": "This is a test contract using the hf-api-specification project to generate a contract on the HF API.",
+                        "_tid": "6035467",
+                        "_timeout": 1,
+                        "_uid": 1337,
+                        "_youramount": 1,
+                        "_yourcurrency": "bytes",
+                        "_theirproduct": "Nothing."
+                      }
+                    }
+                  }
+                }
+              },
+              "schema": {
+                "$ref": "#/components/schemas/ContractsWriteRequestAsk"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Contract(s) info",
+            "headers": {
+              "x-rate-limit-remaining": {
+                "schema": {
+                  "type": "integer",
+                  "description": "Request limit per hour."
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContractsWriteResponse"
                 }
               }
             }

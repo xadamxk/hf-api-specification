@@ -17,6 +17,11 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
+  schemas:
+    ContractPositions:
+      $ref: components/enums/contracts/ContractPositions.yaml
+    ContractPaymentTypes:
+      $ref: components/enums/contracts/ContractPaymentTypes.yaml
 security:
   - bearerAuth: []
 paths:
@@ -56,3 +61,5 @@ paths:
     $ref: paths/write@bytes-withdraw.yaml
   /write/bytes/bump:
     $ref: paths/write@bytes-bump.yaml
+  /write/contracts:
+    $ref: paths/write@contracts.yaml

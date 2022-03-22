@@ -1,0 +1,9 @@
+
+type: string
+enum:
+  - "none"
+  - "buying"
+  - "selling"
+  - "exchanging"
+  - "trading"
+  - "vouchcopy" # Vouch Copy
